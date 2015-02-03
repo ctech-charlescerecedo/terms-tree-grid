@@ -16,10 +16,14 @@
 	
     $scope.favorite = "fav";	
     $scope.page = 0;
-    
+    $scope.limit1 = 1;
+    $scope.limit2 = 10;
+ 
     $scope.next = function(){
 	$scope.page++;
 	//$localStorage.terms = $scope.terms;
+	$scope.limit1 = $scope.limit1 + 10;
+	$scope.limit2 = $scope.limit2 + 10;
 	$scope.searchTerm();
 	
     }
@@ -28,6 +32,8 @@
 		alert("Already at the begining!");
 	}else{
 		$scope.page--;
+		$scope.limit1 = $scope.limit1 - 10;
+		$scope.limit2 = $scope.limit2 - 10;
 		$scope.searchTerm();
 	}
     }
@@ -38,11 +44,13 @@
 	$scope.loading = true; // Let loading button know we are starting
 	if($scope.page == 0){
 		$scope.page = 1;
+		$scope.limit1 = 1;
+		$scope.limit2 = 10;
 	}
 
 	if($scope.favorite == "fav"){
 		console.log("favorite selected");
-		return $http.get("http://terms2.azurewebsites.net/api/term/" + $scope.searchValue + "/codename");
+		return $http.get("http://terms2.azurewebsites.net/api/term/" + $scope.searchValue + "/codename/" + $scope.limit1 + "/" + $scope.limit2);
 	}else{
 		console.log("imo selected");
 		return $http.get("http://terms2.azurewebsites.net/api/term/" + $scope.searchValue + "/10/" + $scope.page);
