@@ -1,0 +1,2854 @@
+
+a:hover{
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+h1, .h1, h2, .h2, h3, .h3, h4, .h4 ,h5, .h5, h6, .h6, a, span, div, button, input, label, table{
+    font-family: 'Helvetica','Segoe','Arial', sans-serif;
+    margin-top: 0;
+}
+
+h1{font-size:28px; font-weight:300;}
+h2{font-size:24px; font-weight:300;}
+h3{font-size:21px; font-weight:800; text-transform:uppercase;}
+h4{font-size:16px; font-weight:800; text-transform:uppercase;}
+h5{font-size:14px; font-weight:800; text-transform:uppercase; display:inline-block;}
+h6{font-size:12px; text-transform:uppercase; margin:0px; padding:0px 0px 5px 0px; line-height:14px; font-weight:800;}
+
+p {
+    font-size: 14px;
+    line-height: 16px;
+    text-transform: none;
+}
+
+.m0p0 {
+    margin: 0px;
+    padding: 0px;
+}
+
+.hide{
+    display: none;
+}
+
+.center{
+    text-align: center;
+}
+.align-center{
+    text-align: center;
+}
+.align-right{
+    text-align: right;
+}
+.align-left{
+    text-align: left;
+}
+
+.example-main-background{
+    padding: 15px;
+}
+/*
+
+Style Guide
+====================
+
+
+Colors
+---------------------
+
+ */
+
+
+.red_fill{
+    background-color:#DD403D;
+}
+.blue_fill{
+    background-color:#3B80FD;
+}
+.green_fill{
+    background-color:#3FD655;
+}
+.yellow_fill{
+    background-color:#FDB83B;
+}
+.red_text{color:#DD403D;}
+.blue_text{color:#3B80FD;}
+.green_text{color:#3FD655;}
+.yellow_text{color:#FDB83B;}
+.black_text{color:black;}
+.white_text{color:white}
+
+.example-swatch{
+    padding: 15px;
+    border:2px solid #F1F1F1;
+    border-radius:5px;
+    color:white;
+    font-size:18px;
+    display:inline-block;
+    margin: 5px;
+    margin-left: 0;
+    width: 125px;
+    text-align: center;
+}
+
+.black_text{
+    color:black;
+}
+
+.white_text{
+    color:white
+}
+
+
+/*
+
+## Interface Colors
+```
+<div href="#" class="example-swatch blue_fill">#3B80FD</div>
+<div href="#" class="example-swatch steelblue_fill">#336699</div>
+<div href="#" class="example-swatch icegray_fill">#C6D2DE</div>
+<div href="#" class="example-swatch black_text steel_d1_fill">#ECF0F1</div>
+<div href="#" class="example-swatch black_text lightgray_fill">#F4F5F7</div>
+
+
+```
+## Steel Background Shades
+```
+<div href="#" class="example-swatch black_text steel_fill">#FBFCFC</div>
+<div href="#" class="example-swatch black_text steel_d1_fill">#ECF0F1</div>
+<div href="#" class="example-swatch black_text steel_d2_fill">#DDE4E6</div>
+<div href="#" class="example-swatch black_text steel_d3_fill">#CFD9DB</div>
+<div href="#" class="example-swatch black_text steel_d4_fill">#C0CDD1</div>
+
+
+```
+
+## Blue Shades
+```
+<div href="#" class="example-swatch blue_fill">#3B80FD</div>
+<div href="#" class="example-swatch blue_fill_hovered">#3573E3</div>
+<div href="#" class="example-swatch blue_d1_fill">#1D3F7D</div>
+<div href="#" class="example-swatch blue_d2_fill">#132951</div>
+<div href="#" class="example-swatch blue_d3_fill">#0E1F3E</div>
+
+```
+
+## Accent Colors
+```
+<div href="#" class="example-swatch red_fill">#DD403D</div>
+<div href="#" class="example-swatch blue_fill">#3B80FD</div>
+<div href="#" class="example-swatch green_fill">#3FD655</div>
+<div href="#" class="example-swatch yellow_fill">#FDB83B</div>
+```
+## Accent Colors w/ Hover
+```
+<div href="#" class="example-swatch blue_fill">#3B80FD</div>
+<div href="#" class="example-swatch blue_fill_hovered">#3573E3</div>
+
+```
+```
+<div href="#" class="example-swatch red_fill">#DD403D</div>
+<div href="#" class="example-swatch red_fill_hovered">#C33936</div>
+
+```
+```
+<div href="#" class="example-swatch green_fill">#3FD655</div>
+<div href="#" class="example-swatch green_fill_hovered">#37BC4B</div>
+
+```
+```
+<div href="#" class="example-swatch yellow_fill">#FDB83B</div>
+<div href="#" class="example-swatch yellow_fill_hovered">#E3A535</div>
+
+```
+## Gray Scale Resources
+
+```
+<div href="#" class="example-swatch gray_fill black_text">#F7F7F7</div>
+<div href="#" class="example-swatch gray_d1_fill black_text">#E5E5E5</div>
+<div href="#" class="example-swatch gray_d2_fill">#BCBCBC</div>
+<div href="#" class="example-swatch gray_d3_fill">#787878</div>
+<div href="#" class="example-swatch gray_d4_fill">#535353</div>
+<div href="#" class="example-swatch gray_d5_fill">#383737</div>
+<div href="#" class="example-swatch gray_d6_fill">#040404</div>
+
+```
+
+ */
+
+.blue_d1_fill{
+    background-color:#1d3f7d;
+}
+.blue_d2_fill{
+    background-color:#132951;
+}
+.blue_d3_fill{
+    background-color:#0E1F3E;
+}
+.steelblue_fill{
+    background-color:#336699;
+}
+.icegray_fill{
+    background-color:#c6d2de;
+}
+.lightgray_fill{
+    background-color:#f4f5f7;
+}
+
+.blue_d1_text{color:#1d3f7d;}
+.blue_d2_text{color:#132951;}
+.blue_d3_text{color:#132951;}
+.steelblue_text{color:#336699;}
+.icegray_text{color:#c6d2de;}
+.lightgray_text{color:#f4f5f7;}
+
+
+.gray_fill{
+    background-color:#f7f7f7;
+}
+.gray_d1_fill{
+    background-color:#e5e5e5;
+}
+.gray_d2_fill{
+    background-color:#bcbcbc;
+}
+.gray_d3_fill{
+    background-color:#787878;
+}
+.gray_d4_fill{
+    background-color:#535353;
+}
+.gray_d5_fill{
+    background-color:#383737;
+}
+.gray_d6_fill{
+    background-color:#040404;
+}
+
+.gray_text{
+    color:#f7f7f7;
+}
+.gray_d1_text{
+    color:#e5e5e5;
+}
+.gray_d2_text{
+    color:#bcbcbc;
+}
+.gray_d3_text{
+    color:#787878;
+}
+.gray_d4_text{
+    color:#535353;
+}
+.gray_d5_text{
+    color:#383737;
+}
+.gray_d6_text{
+    color:#040404;
+}
+
+.steel_fill{
+    background-color:#fbfcfc;
+}
+.steel_d1_fill{
+    background-color:#ecf0f1;
+}
+.steel_d2_fill{
+    background-color:#dde4e6;
+}
+.steel_d3_fill{
+    background-color:#cfd9db;
+}
+.steel_d4_fill{
+    background-color:#c0cdd1;
+}
+
+.steel_text{color:#fbfcfc;}
+.steel_text{color:#ecf0f1;}
+.steel_text{color:#dde4e6;}
+.steel_text{color:#cfd9db;}
+.steel_text{color:#c0cdd1;}
+
+
+.red_fill_hover:hover{
+    background-color:#C33936;
+    cursor: pointer;
+}
+
+.blue_fill_hover:hover{
+    background-color:#3573E3;
+    cursor: pointer;
+
+}
+
+.green_fill_hover:hover{
+    background-color:#37BC4B;
+    cursor: pointer;
+}
+
+.yellow_fill_hover:hover{
+    background-color:#E3A535;
+    cursor: pointer;
+}
+
+.red_fill_hovered{
+    background-color:#C33936;
+}
+
+.blue_fill_hovered{
+    background-color:#3573E3;
+}
+
+.green_fill_hovered{
+    background-color:#37BC4B;
+}
+
+.yellow_fill_hovered{
+    background-color:#E3A535;
+
+}
+
+.red_hover_text:hover{color:#C33936;}
+.blue_hover_text:hover{color:#3573E3;}
+.green_hover_text:hover{color:#37BC4B;}
+.yellow_hover_text:hover{color:#E3A535;}
+.red_hovered_text{color:#C33936;}
+.blue_hovered_text{color:#3573E3;}
+.green_hovered_text{color:#37BC4B;}
+.yellow_hovered_text{color:#E3A535;}
+
+
+/*
+## Buttons
+
+```
+<!-- Standard button -->
+<button type="button" class="btn btn-default">Default</button>
+
+<!-- Standard Inverse button -->
+<div href="#" style="padding:10px;" class="example-swatch gray_d5_fill">
+<button type="button" class="btn btn-white">White</button>
+</div>
+
+<!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
+<button type="button" class="btn btn-primary">Primary</button>
+
+<!-- Indicates a successful or positive action -->
+<button type="button" class="btn btn-success">Success</button>
+
+<!-- Contextual button for informational alert messages -->
+<button type="button" class="btn btn-info">Info</button>
+
+<!-- Indicates caution should be taken with this action -->
+<button type="button" class="btn btn-warning">Warning</button>
+
+<!-- Indicates a dangerous or potentially negative action -->
+<button type="button" class="btn btn-danger">Danger</button>
+
+<!-- Deemphasize a button by making it look like a link while maintaining button behavior -->
+<button type="button" class="btn btn-link">Link</button>
+```
+
+<button type="button" class="btn btn-primary">Button</button>
+<span>Used for links that <b>navigate the user to preform</b> actions, such as View and Edit</span>
+<br>
+<button type="button" class="btn btn-default">Button</button>
+<span>Used to execute <b>standard</b> actions, such as Cancel</span>
+<br>
+<button type="button" class="btn btn-white">Button</button>
+<span>Used to execute <b>standard</b> actions, such as Cancel</span>
+<br>
+<button type="button" class="btn btn-danger">Button</button>
+<span>Used to execute <b>critical and not easily revertible</b> actions, such as Delete and Sign-Off</span>
+<br>
+<button type="button" class="btn btn-info">Button</button>
+<span>Used to execute <b>standard storage</b> actions, such as Add Favorite</span>
+<br>
+<button type="button" class="btn btn-success">Button</button>
+<span>Used to execute <b>important storage</b> actions, such as Save and Add</span>
+
+*/
+/*
+## Buttons Sizes
+```
+<p>
+  <button type="button" class="btn btn-primary btn-lg">Large button</button>
+  <button type="button" class="btn btn-default btn-lg">Large button</button>
+</p>
+<p>
+  <button type="button" class="btn btn-primary">Default button</button>
+  <button type="button" class="btn btn-default">Default button</button>
+</p>
+<p>
+  <button type="button" class="btn btn-primary btn-sm">Small button</button>
+  <button type="button" class="btn btn-default btn-sm">Small button</button>
+</p>
+<p>
+  <button type="button" class="btn btn-primary btn-xs">Extra small button</button>
+  <button type="button" class="btn btn-default btn-xs">Extra small button</button>
+</p>
+
+```
+
+
+## Block Level Buttons
+```
+<div class="well" style="max-width: 400px; margin: 0 auto 10px;">
+	<button type="button" class="btn btn-primary btn-lg btn-block">Block level button</button>
+	<button type="button" class="btn btn-default btn-lg btn-block">Block level button</button>
+</div>
+```
+
+## Disabled Buttons
+```
+<button type="button" class="btn btn-lg btn-primary" disabled="disabled">Primary button</button>
+<button type="button" class="btn btn-default btn-lg" disabled="disabled">Button</button>
+```
+
+## Text
+Main font  **Helvetica** fallback to **Segoe**, **Arial**, **sans-serif**.
+
+```
+    <span>This is default span text.</span>
+<br>
+    <span class="blue_d1_text">This is span text with "blue_d1_text" class.</span>
+<br>
+    <a>This is default anchor tag text.</a>
+<br>
+    <a class="green_text green_hover_text">This is anchor tag text with "green_text" and "green hover" classes.</a>
+<br>
+    <p>This is default paragraph text.</p>
+    <p class="red_text">This is paragraph text with "red_text" class.</p>
+```
+```
+
+    <p class="font-light">This is paragraph text with "font-light" class.</p>
+    <p class="font-norm">This is paragraph text with "font-norm" class.</p>
+    <p class="font-bold">This is paragraph text with "font-bold" class.</p>
+    <p class="font-upcase">This is paragraph text with "font-upcase" class.</p>
+
+```
+
+*/
+
+
+.font-light{font-weight:300;}
+.font-norm{font-weight:400;}
+.font-bold{font-weight:bold;}
+.font-upcase{text-transform:uppercase;}
+
+.font-8px{font-size:8px;}
+.font-9px{font-size:9px;}
+.font-10px{font-size:10px;}
+.font-11px{font-size:11px;}
+.font-12px{font-size:12px;}
+.font-13px{font-size:13px;}
+.font-14px{font-size:14px;}
+.font-15px{font-size:15px;}
+.font-16px{font-size:16px;}
+.font-17px{font-size:17px;}
+.font-18px{font-size:18px;}
+.font-19px{font-size:19px;}
+.font-20px{font-size:20px;}
+.font-21px{font-size:21px;}
+.font-22px{font-size:22px;}
+.font-23px{font-size:23px;}
+.font-24px{font-size:24px;}
+.font-25px{font-size:25px;}
+.font-26px{font-size:26px;}
+.font-27px{font-size:27px;}
+.font-28px{font-size:28px;}
+.font-29px{font-size:29px;}
+.font-30px{font-size:30px;}
+.font-31px{font-size:31px;}
+.font-32px{font-size:32px;}
+.font-33px{font-size:33px;}
+.font-34px{font-size:34px;}
+.font-35px{font-size:35px;}
+.font-36px{font-size:36px;}
+.font-37px{font-size:37px;}
+.font-38px{font-size:38px;}
+.font-39px{font-size:39px;}
+.font-40px{font-size:40px;}
+.font-41px{font-size:41px;}
+.font-42px{font-size:42px;}
+.font-43px{font-size:43px;}
+.font-44px{font-size:44px;}
+.font-45px{font-size:45px;}
+.font-46px{font-size:46px;}
+.font-47px{font-size:47px;}
+.font-48px{font-size:48px;}
+.font-49px{font-size:49px;}
+.font-50px{font-size:50px;}
+.font-51px{font-size:51px;}
+.font-52px{font-size:52px;}
+.font-53px{font-size:53px;}
+.font-54px{font-size:54px;}
+.font-55px{font-size:55px;}
+.font-56px{font-size:56px;}
+.font-57px{font-size:57px;}
+.font-58px{font-size:58px;}
+.font-59px{font-size:59px;}
+.font-60px{font-size:60px;}
+.font-61px{font-size:61px;}
+.font-62px{font-size:62px;}
+.font-63px{font-size:63px;}
+.font-64px{font-size:64px;}
+.font-65px{font-size:65px;}
+.font-66px{font-size:66px;}
+.font-67px{font-size:67px;}
+.font-68px{font-size:68px;}
+.font-69px{font-size:69px;}
+.font-70px{font-size:70px;}
+
+
+/*
+
+## Headings
+Headings are text placed above elements that group and categorize the relationship of these elements. Headings enable the user to digest information in pieces rather than skimming all of the content at once.
+```
+<h1>Hamburgfontive</h1>
+<h2>Hamburgfontive</h2>
+<h3>Hamburgfontive</h3>
+<h4>Hamburgfontive</h4>
+<h5>Hamburgfontive</h5>
+<h6>Hamburgfontive</h6>
+```
+*/
+
+/*
+#Labels
+```
+<span class="label label-default">Default</span>
+<span class="label label-primary">Primary</span>
+<span class="label label-success">Success</span>
+<span class="label label-info">Info</span>
+<span class="label label-warning">Warning</span>
+<span class="label label-danger">Danger</span>
+```
+*/
+
+
+
+/*
+#Badges
+```
+<a class="gray_d4_text" href="#">Items <span class="badge gray_d4_fill">4</span></a>
+<br>
+<br>
+<a class="gray_d4_text" href="#">Updates <span class="badge blue_fill">12</span></a>
+<br>
+<br>
+<a class="gray_d4_text" href="#">Alerts <span class="badge red_fill">42</span></a>
+```
+*/
+/*
+## System Icons - Linearicons
+<h4>Full Linearicons Icon <a href="linearicons/Reference.html">Reference List Here</a></h4>
+```
+<div class="well">
+    <a href="#" class="ico-system icon-circle-plus"></a>
+    <a href="#" class="ico-system icon-circle-cross"></a>
+    <a href="#" class="ico-system icon-circle-left"></a>
+    <a href="#" class="ico-system icon-circle-right"></a>
+    <a href="#" class="ico-system icon-circle-checkmark"></a>
+</div>
+
+```
+<br>
+<div style="margin:5px;">
+    <a href="#" class="ico-system icon-circle-plus"></a>
+    <span>Links that <b>navigate the user to preform an Add action</b></span>
+</div>
+
+<br>
+<br>
+<br>
+
+```
+<div class="well">
+    <span class="ico-system icon-graph"></span>
+    <span class="ico-system icon-chart-growth"></span>
+    <span class="ico-system icon-pie-chart"></span>
+    <span class="ico-system icon-pulse"></span>
+    <span class="ico-system icon-lab"></span>
+
+    <span class="ico-system icon-syringe"></span>
+    <span class="ico-system icon-first-aid"></span>
+    <span class="ico-system icon-register"></span>
+    <span class="ico-system icon-clipboard"></span>
+    <span class="ico-system icon-clipboard-check"></span>
+</div>
+```
+*/
+/*
+
+## System Icons - Font Awesome
+<h4>Full Icon List Reference <a href="font-awesome/Font_awesome_cheatsheet.html">Reference List Here</a></h4>
+```
+<div class="well">
+
+    <i class="fa fa-chevron-down"></i>
+    <i class="fa fa-chevron-up"></i>
+    <i class="fa fa-chevron-left"></i>
+    <i class="fa fa-chevron-right"></i>
+    <i class="fa fa-caret-down"></i>
+    <i class="fa fa-caret-up"></i>
+    <i class="fa fa-asterisk"></i>
+    <i class="fa fa-plus-circle"></i>
+    <i class="fa fa-circle"></i>
+    <i class="fa fa-circle-o"></i>
+    <i class="fa fa-spinner fa-spin"></i>
+
+</div>
+```
+```
+<div class="well">
+
+    <ul class="fa-ul">
+      <li><i class="fa-li fa fa-check-square"></i>List icons</li>
+      <li><i class="fa-li fa fa-check-square"></i>can be used</li>
+      <li><i class="fa-li fa fa-spinner fa-spin"></i>as bullets</li>
+      <li><i class="fa-li fa fa-square"></i>in lists</li>
+    </ul>
+
+</div>
+```
+*/
+
+.ico-system {
+    font-size: 52px;
+}
+
+
+
+/*
+## Main Nav Artifacts
+```
+<nav>
+    <div class="main_nav_item">
+        <a class="blue_fill blue_fill_hover main_nav_item_page"><i class="fa fa-list-alt"></i><span>overview</span></a>
+        <a class="blue_fill blue_fill_hover main_nav_item_drop"><i class="fa fa-sort-desc"></i></a>
+    </div>
+</nav>
+```
+*/
+
+.main_nav_item{
+    overflow: visible;
+    margin-right: 10px;
+    display: inline-block;
+    position: relative;
+}
+
+.main_nav_item_page{
+    display: block;
+    float: left;
+    height: 75px;
+    color: white;
+    width: 120px;
+    padding: 7px;
+}
+
+.main_nav_item_drop{
+    height: 75px;
+    color: white;
+    width: 30px;
+    padding: 10px;
+    float: left;
+    margin-left: 1px;
+}
+
+.main_nav_item_drop i{
+    font-size: 18px;
+}
+.main_nav_item_page:hover{
+    color: white;
+}
+.main_nav_item_drop:hover{
+    color: white;
+}
+.main_nav_item_page i{
+    font-size: 26px;
+    margin-bottom: 15px;
+    display: block;
+}
+
+.main_nav_item_page span{
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size:12px;
+}
+
+.main_nav_selected_item{
+    position: absolute;
+    color: #336699;
+    font-size: 45px;
+    top: 78px;
+    left: 62px;
+}
+
+
+/*
+#Header Artifacts
+```
+<div class="example-main-background steel_d1_fill">
+    <div class="header_patient_info">
+        <i class="fa fa-info-circle patient_info_i "></i>
+        <img class="patient_info_img" src="http://placehold.it/65x65">
+        <ul class="patient_info_list">
+            <li><h4>ARKADIY AVROROV</h4></li>
+            <li>#80039223</li>
+            <li>63 YEARS OLD (MALE)</li>
+            <li>FOLLOW UP</li>
+        </ul>
+    </div>
+</div>
+
+```
+*/
+
+
+.header_patient_info{
+    overflow: hidden;
+}
+
+.patient_info_i{
+    float: right;
+    border-radius: 0 3px 3px 0;
+    background-color: #C0CDD1;
+    height: 65px;
+    width: 30px;
+    color: #fff;
+    font-size: 25px;
+    text-align: center;
+    line-height: 55px;
+    display: block;
+    padding-top: 6px;
+    margin-left: 2px;
+}
+.patient_info_i:hover{
+    background-color: #c6d3de;
+    cursor: pointer;
+}
+
+.patient_info_img{
+    float:right;
+}
+
+.patient_info_list{
+    float: right;
+    list-style: none;
+    font-size: 12px;
+    text-align: right;
+    margin-right: 10px;
+}
+.patient_info_list h4{
+    margin-bottom: 0;
+}
+
+
+.header_menu_trigger{
+    padding: 26px;
+    padding-bottom: 0px;
+    padding-top: 0px;
+    background-color: #C0CDD1;
+    color: white;
+    font-size: 45px;
+    height: 55px;
+    overflow: hidden;
+    display: inline-block;
+    border-radius: 0px 0px 8px 8px;
+}
+
+
+.header_menu_trigger:hover{
+    background-color: #c6d3de;
+    cursor: pointer;
+}
+
+/*
+#Nav Pull-Down
+```
+<div style="padding-top: 0px;" class="example-main-background steel_d1_fill">
+    <div class="center">
+        <span class="header_menu_trigger"><i class="icon-chevron-down"></i></span>
+    </div>
+</div>
+
+```
+*/
+
+/*
+```
+<div class="example_nav_container blue_d1_fill">
+    <nav>
+        <div class="main_nav_item">
+            <a class="blue_fill blue_fill_hover main_nav_item_page"><i class="fa fa-list-alt"></i><span>overview</span></a>
+            <a class="blue_fill blue_fill_hover main_nav_item_drop"><i class="fa fa-sort-desc"></i></a>
+        </div>
+        <div class="main_nav_item">
+            <a class="blue_fill blue_fill_hover main_nav_item_page"><i class="fa fa-user"></i><span>member</span></a>
+            <a class="blue_fill blue_fill_hover main_nav_item_drop"><i class="fa fa-sort-desc"></i></a>
+            <i class="fa fa-sort-asc main_nav_selected_item"></i>
+        </div>
+        <div class="main_nav_item">
+            <a class="blue_fill blue_fill_hover main_nav_item_page"><i class="fa fa-pencil"></i><span>my notes</span></a>
+            <a class="blue_fill blue_fill_hover main_nav_item_drop"><i class="fa fa-sort-desc"></i></a>
+        </div>
+        <div class="main_nav_item">
+            <a class="blue_fill blue_fill_hover main_nav_item_page"><i class="fa fa-bar-chart"></i><span>active charts</span></a>
+            <a class="blue_fill blue_fill_hover main_nav_item_drop"><i class="fa fa-sort-desc"></i></a>
+        </div>
+    </nav>
+</div>
+<div class="example_nav_container steelblue_fill">
+</div>
+
+```
+*/
+
+.example_nav_container{
+    padding: 20px;
+    padding-bottom: 13px;
+}
+
+/*
+```
+<div class="example_nav_container blue_d1_fill">
+    <nav>
+        <div class="main_nav_item">
+            <a class="blue_fill blue_fill_hover main_nav_item_page"><i class="fa fa-list-alt"></i><span>overview</span></a>
+            <a class="blue_fill blue_fill_hover main_nav_item_drop"><i class="fa fa-sort-desc"></i></a>
+        </div>
+        <div class="main_nav_item">
+            <a class="blue_fill blue_fill_hover main_nav_item_page"><i class="fa fa-user"></i><span>member</span></a>
+            <a class="blue_fill blue_fill_hover main_nav_item_drop"><i class="fa fa-sort-desc"></i></a>
+            <i class="fa fa-sort-asc main_nav_selected_item"></i>
+        </div>
+        <div class="main_nav_item">
+            <a class="blue_fill blue_fill_hover main_nav_item_page"><i class="fa fa-pencil"></i><span>my notes</span></a>
+            <a class="blue_fill blue_fill_hover main_nav_item_drop"><i class="fa fa-sort-desc"></i></a>
+        </div>
+        <div class="main_nav_item">
+            <a class="blue_fill blue_fill_hover main_nav_item_page"><i class="fa fa-bar-chart"></i><span>active charts</span></a>
+            <a class="blue_fill blue_fill_hover main_nav_item_drop"><i class="fa fa-sort-desc"></i></a>
+        </div>
+    </nav>
+</div>
+<div class="example_nav_container steelblue_fill">
+    <nav>
+        <a class="sub_nav_item active">patient summary</a>
+        <a class="sub_nav_item">problems</a>
+        <a class="sub_nav_item">interventions</a>
+        <a class="sub_nav_item">goals & status</a>
+    </nav>
+</div>
+
+```
+*/
+
+.sub_nav_item{
+    padding: 10px;
+    text-transform: uppercase;
+    font-size:12px;
+    color:white;
+    display: inline-block;
+    width:180px;
+    background-color: #1d3f7d;
+    border:1px solid #3573E3;
+}
+.sub_nav_item:hover{
+    color:white;
+    background-color: #3B80FD;
+    border:1px solid #3B80FD;
+}
+
+.sub_nav_item.active{
+    background-color: #3B80FD;
+    border:1px solid #3B80FD;
+}
+/*
+```
+<div class="example_nav_container blue_d1_fill">
+    <div class="main_nav_search">
+         <input class="blue_fill" type="text" name="search" placeholder="PATIENT SEARCH"><i class="fa fa-search"></i>
+         <a class="blue_fill blue_fill_hover main_nav_search_drop"><i class="fa fa-sort-desc"></i></a>
+    </div>
+</div>
+
+
+```
+*/
+
+.main_nav_search_drop{
+    padding: 6px 10px 6px 10px;
+    color: white;
+    margin-left: -21px;
+}
+.main_nav_search_drop:hover{
+    color: white;
+}
+
+.main_nav_search .fa-search{
+    color: white;
+    position: relative;
+    left: -23px;
+    font-size: 19px;
+}
+.main_nav_search i:hover{
+    color: white;
+}
+.main_nav_search input{
+    width: 250px;
+    padding: 4px;
+    color: white;
+    border: 0;
+    padding-right: 30px;
+    text-transform: uppercase;
+}
+.main_nav_search input::-webkit-input-placeholder {
+    color: white;
+}
+.main_nav_search input:-moz-placeholder { /* Firefox 18- */
+    color: white;
+}
+.main_nav_search input::-moz-placeholder {  /* Firefox 19+ */
+    color: white;
+}
+.main_nav_search input:-ms-input-placeholder {
+    color: white;
+}
+
+/*
+```
+<div class="example_nav_container blue_d1_fill">
+
+     <a class="white_text main_nav_cog"><i class="fa fa-cog"></i></a>
+
+</div>
+
+```
+*/
+
+.main_nav_cog{
+    font-size: 26px;
+}
+.main_nav_cog:hover{
+    color:#3B80FD;
+}
+
+/*
+#Footer Artifacts
+```
+<div class="example_nav_container blue_d1_fill">
+
+     <a class="main_nav_notice_item"><span>6</span>WAIT</a>
+
+</div>
+
+```
+*/
+
+/*
+```
+<div class="example_nav_container blue_d1_fill">
+
+     <a class="main_nav_notice_item"><span>6</span>WAIT</a>
+     <a class="main_nav_notice_item"><span>3</span>MSGS</a>
+     <a class="main_nav_notice_item"><span>4</span>WRKFLW</a>
+
+</div>
+
+
+```
+*/
+
+.main_nav_notice_item{
+    display: inline-block;
+    font-size: 15px;
+    color: white;
+    margin-right: 24px;
+}
+
+.main_nav_notice_item span{
+    border: 1px solid white;
+    border-radius: 144px;
+    padding: 0px;
+    width: 35px;
+    height: 35px;
+    display: inline-block;
+    text-align: center;
+    font-size: 24px;
+    margin-right: 4px;
+    color: white;
+    font-weight: 200;
+}
+.main_nav_notice_item:hover {
+    color:#3B80FD;
+}
+
+.main_nav_notice_item:hover span{
+    color:#3B80FD;
+    border-color:#3B80FD;
+}
+/*
+```
+<div class="example_nav_container steel_d1_fill">
+
+     <a class="main_nav_notice_item_dark"><span>6</span>WAIT</a>
+     <a class="main_nav_notice_item_dark"><span>3</span>MSGS</a>
+     <a class="main_nav_notice_item_dark"><span>4</span>WRKFLW</a>
+
+</div>
+
+
+```
+*/
+.main_nav_notice_item_dark{
+    display: inline-block;
+    font-size: 15px;
+    color: #1d3f7d;
+    margin-right: 24px;
+}
+
+.main_nav_notice_item_dark span{
+    border: 1px solid #1d3f7d;
+    border-radius: 144px;
+    padding: 0px;
+    width: 35px;
+    height: 35px;
+    display: inline-block;
+    text-align: center;
+    font-size: 24px;
+    margin-right: 4px;
+    color: #1d3f7d;
+    font-weight: 200;
+}
+.main_nav_notice_item_dark:hover {
+    color:#3B80FD;
+}
+
+.main_nav_notice_item_dark:hover span{
+    color:#3B80FD;
+    border-color:#3B80FD;
+}
+
+/*
+#Footer Alerts
+
+```
+<div style="width:600px;" class="example-main-background steel_d1_fill">
+    <div class="footer_alert_item">
+        <a href="#" class="icon-chevron-left gray_d4_text footer_alert_cycle"></a>
+        <div class="yellow_fill footer_alert_msg">
+            <span>Dr.John is falling behind on work items. Can you help?</span>
+            <button type="button" class="btn btn-sm btn-white">Address</button>
+            <button type="button" class="btn btn-sm btn-default">Hide</button>
+        </div>
+       <a href="#" class="icon-chevron-right gray_d4_text footer_alert_cycle"></a>
+    </div>
+</div>
+<div style="width:600px;" class="example-main-background steel_d1_fill">
+    <div class="footer_alert_item">
+        <a href="#" class="icon-chevron-left gray_d4_text footer_alert_cycle"></a>
+        <div class="red_fill footer_alert_msg">
+            <span class="white_text">Dr.John is falling behind on work items. Can you help?</span>
+            <button type="button" class="btn btn-sm btn-white">Address</button>
+            <button type="button" class="btn btn-sm btn-default">Hide</button>
+        </div>
+       <a href="#" class="icon-chevron-right gray_d4_text footer_alert_cycle"></a>
+    </div>
+</div>
+<div style="width:600px;" class="example-main-background steel_d1_fill">
+    <div class="footer_alert_item">
+        <a href="#" class="icon-chevron-left gray_d4_text footer_alert_cycle"></a>
+        <div class="blue_fill footer_alert_msg">
+            <span class="white_text">Dr.John is falling behind on work items. Can you help?</span>
+            <button type="button" class="btn btn-sm btn-white">Address</button>
+            <button type="button" class="btn btn-sm btn-default">Hide</button>
+        </div>
+       <a href="#" class="icon-chevron-right gray_d4_text footer_alert_cycle"></a>
+    </div>
+</div>
+```
+*/
+.footer_alert_item{
+    width:100%;
+}
+
+.footer_alert_msg{
+    padding: 5px;
+    border-radius: 3px;
+    position: relative;
+    width: 85%;
+    display: inline-block;
+}
+
+.footer_alert_item span{
+    font-weight: bold;
+    font-size: 12px;
+    margin-right: 5px;
+}
+
+.footer_alert_close{
+    font-size: 35px;
+    font-weight: normal;
+    position: absolute;
+    left: 92%;
+    top: 2px;
+    color:#535353;
+}
+.footer_alert_cycle{
+    display: inline-block;
+    font-size: 32px;
+    position: relative;
+    top: 9px;
+}
+
+.footer_alert_msg button{
+    min-width: 66px;
+}
+
+/*
+#Footer Save
+```
+<div class="steelblue_fill center">
+    <button class="btn btn-success btn-save" type="submit">SAVE</button>
+</div>
+
+```
+*/
+
+.btn-save{
+    margin: 10px;
+    padding: 12px;
+    font-size: 16px;
+    padding-right: 24px;
+    padding-left: 24px;
+    font-weight: bold;
+}
+
+
+/*
+## Patient Summary Artifacts
+*/
+/*
+## Lab Artifacts
+```
+<a class="sum_lab_item">
+    <span class="sum_lab_item_txt"><i class="fa fa-plus-circle"></i>CBC With Platelet</span>
+    <span class="sum_lab_item_num danger"><i class="fa fa-sort-asc"></i>220-530</span>
+</a>
+```
+```
+<a class="sum_lab_item">
+    <span class="sum_lab_item_txt"><i class="fa fa-plus-circle"></i>CBC With Platelet</span>
+    <span class="sum_lab_item_num danger"><i class="fa fa-sort-asc"></i>220-530</span>
+</a>
+<a class="sum_lab_item">
+    <span class="sum_lab_item_txt"><i class="fa fa-plus-circle"></i>CBC With Platelet</span>
+    <span class="sum_lab_item_num warn"><i class="fa fa-sort-asc"></i>200-330</span>
+</a>
+<a class="sum_lab_item">
+    <span class="sum_lab_item_txt"><i class="fa fa-plus-circle"></i>Thyroid Screening</span>
+    <span class="sum_lab_item_num">230.5</span>
+</a>
+<a class="sum_lab_item">
+    <span class="sum_lab_item_txt"><i class="fa fa-plus-circle"></i>Potassium</span>
+    <span class="sum_lab_item_num"><i class="fa fa-sort-desc"></i>332</span>
+</a>
+
+```
+<br>
+<div>
+<a class="sum_lab_item">
+    <span class="sum_lab_item_num danger"><i class="fa fa-sort-asc"></i>220-530</span>
+</a>
+<p>Used to indicate an alarming level ( <i class="fa fa-sort-asc"></i> above or  <i class="fa fa-sort-desc"></i> below normal)</p>
+</div>
+<br>
+*/
+
+
+.sum_lab_item{
+    font-size: 16px;
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.sum_lab_item_txt{
+    display: block;
+    color:#132951;
+}
+
+.sum_lab_item i{
+    margin-right: 4px;
+}
+.sum_lab_item_txt i{
+    opacity: 0.5;
+}
+.sum_lab_item_num{
+    margin-left: 20px;
+    color: #383737;
+    background: white;
+    padding: 1px;
+    background: #CFD9DB;
+    font-weight: bold;
+    padding-left: 4px;
+    padding-right: 4px;
+    border-radius: 2px;
+}
+
+.sum_lab_item_num.danger{
+    color: white;
+    background: #DD403D;
+    padding: 1px;
+    margin-left: 20px;
+    font-weight: bold;
+    padding-left: 4px;
+    padding-right: 4px;
+    border-radius: 2px;
+}
+
+.sum_lab_item_num.warn{
+    color: #383737;
+    background: #FDB83B;
+    padding: 1px;
+    margin-left: 20px;
+    font-weight: bold;
+    padding-left: 4px;
+    padding-right: 4px;
+    border-radius: 2px;
+}
+
+.sum_lab_item_num .fa-sort-asc{
+    top: 4px;
+    position: relative;
+}
+
+.sum_lab_item_num .fa-sort-desc{
+    top: -3px;
+    position: relative;
+}
+
+/*
+# Display Items
+*/
+
+
+.single_item{
+    background-color: #FBFCFC;
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 2px;
+}
+
+.single_item_hover:hover{
+    background-color: #dde4e6;
+    cursor: pointer;
+}
+.single_item h2{
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.single_item p:last-child{
+    margin-bottom: 0px;
+}
+
+.single_item_title{
+    display: block;
+}
+
+/*
+```
+<div class="example-main-background steel_d1_fill">
+    <div class="single_item">
+        <h6>HPI</h6>
+        <p>Patient complains of chest pain, which began three hours ago. Pain has been off and on since that time with each episode lasting two to three minutes. The pain is described as â€œcrushingâ€ and at times is rated as an eight on a scale...</p>
+    </div>
+</div>
+
+```
+```
+<div style="width:500px;" class="example-main-background steel_d1_fill">
+    <div class="item_list">
+        <div class="single_item">
+            <h2>Chest Pain</h2>
+        </div>
+        <div class="single_item single_item_hover">
+            <h6>HPI</h6>
+            <p>Patient complains of chest pain, which began three hours ago. Pain has been off and on since that time with each episode lasting two to three minutes. The pain is described as â€œcrushingâ€ and at times is rated as an eight on a scale...</p>
+        </div>
+        <div class="single_item single_item_hover">
+            <h6>Allergies</h6>
+            <p>Egg, Wheat, Peanut, Fish, Sulfite, Casein, Urticaria</p>
+        </div>
+    </div>
+</div>
+
+```
+```
+<div style="width:500px;" class="example-main-background steel_d1_fill">
+    <div class="item_list">
+        <h5 class="gray_d4_text">PROBLEMS <i class="fa fa-chevron-right"></i></h5>
+        <div class="single_item single_item_hover">
+            <span class="single_item_title">DM II(Controlled) with Osteomyelitis</span>
+        </div>
+        <div class="single_item single_item_hover">
+            <span class="single_item_title">GU/Hemodialysis Testing</span>
+        </div>
+        <div class="single_item single_item_hover">
+            <span class="single_item_title">Diabetic Skin Ulcer, Ankle</span>
+        </div>
+        <div class="single_item single_item_hover">
+            <span class="single_item_title">Finger Abrasion</span>
+        </div>
+    </div>
+</div>
+
+```
+```
+<div class="example-main-background steel_d1_fill">
+    <div class="single_item">
+        <span class="label label-danger">Must Assess</span>
+        <span class="label label-plain gray_d5_text">2 years old</span>
+        <span class="single_item_title">DM II(Controlled) with Osteomyelitis</span>
+    </div>
+</div>
+
+```
+```
+<div style="width:500px;" class="example-main-background steel_d1_fill">
+
+    <div class="item_list">
+        <div class="item_list_title">
+             <span>Active Problems</span>
+        </div>
+        <div class="single_item single_item_hover">
+            <span class="label label-danger">Must Assess</span>
+            <span class="label label-plain gray_d5_text">2 years old</span>
+            <span class="single_item_title">DM II(Controlled) with Osteomyelitis</span>
+        </div>
+        <div class="single_item single_item_hover">
+            <span class="label label-danger">Must Assess</span>
+            <span class="label label-plain gray_d5_text">1 years old</span>
+            <span class="single_item_title">Congestive Heart Failure</span>
+        </div>
+        <div class="single_item single_item_hover">
+            <span class="label label-plain gray_d5_text">6 years old</span>
+            <span class="single_item_title">Diabetic Skin Ulcer, Ankle</span>
+        </div>
+    </div>
+
+
+</div>
+
+```
+```
+<div style="width:500px;" class="example-main-background steel_d1_fill">
+
+    <div class="item_list">
+        <h5 class="gray_d4_text">MEDICATIONS <i class="fa fa-chevron-right"></i></h5>
+        <div classrgin-top: 10px;
+    margin-bottom: 10px;
+}
+
+
+.side_nav_item:hover{
+    background-color: #dde4e6;
+    cursor: pointer;
+}
+
+.side_nav_item i{
+    margin-right: 5px;
+    color: #535353;
+}
+
+
+/*
+```
+<div style="width:400px;" class="example-main-background steel_d1_fill">
+
+        <div class="side_nav_item_internal">
+             <i class="ico-system icon-circle-plus"></i><span>Add New Diagnosis</span>
+        </div>
+</div>
+
+```
+*/
+
+
+.side_nav_item_internal{
+    display: inline-block;
+    background-color:inherit;
+    padding: 10px;
+    font-size: 16px;
+    color: #535353;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    padding-bottom: 2px;
+    padding-top: 2px;
+}
+
+.side_nav_item_internal span{
+    font-size: 18px;
+    position: relative;
+    top: -7px;
+}
+
+.side_nav_item_internal:hover{
+    cursor: pointer;
+}
+
+.side_nav_item_internal i{
+    margin-right: 5px;
+
+    font-size: 36px;
+    color: #3B80FD;
+}
+
+.side_nav_item_internal:hover i{
+    color: #3573E3;
+}
+.side_nav_item_internal:hover span{
+    color: black;
+}
+
+/*
+```
+<div style="width:400px;" class="example-main-background steel_d1_fill">
+
+        <div class="side_nav_item_internal">
+             <i class="ico-system icon-circle-plus"></i><span>Add Problem</span>
+        </div>
+
+        <div class="side_nav_item_internal">
+             <i class="ico-system icon-circle-plus"></i><span>Add New Diagnosis</span>
+        </div>
+
+
+        <div class="side_nav_item">
+              <i class="fa fa-chevron-right"></i><span class="single_nav_item">Update Care Plan</span>
+        </div>
+        <div class="side_nav_item">
+              <i class="fa fa-chevron-right"></i><span class="single_nav_item">Order Lab/Test</span>
+        </div>
+</div>
+
+```
+*/
+
+
+
+
+/*
+```
+<div style="width:900px;" class="example-main-background steel_d1_fill">
+    <ul class="nav nav-tabs" role="tablist">
+          <li><a href="#home" role="tab" data-toggle="tab">Tab Heading <span class="badge">1</span></a></li>
+          <li class="active"><a href="#profile" role="tab" data-toggle="tab">Tab Heading Longer <span class="badge">2</span></a></li>
+          <li><a href="#messages" role="tab" data-toggle="tab">Tab Heading Max Length <span class="badge">11</span></a></li>
+    </ul>
+</div>
+```
+*/
+
+.nav-tabs{
+    border: 0;
+}
+.nav-tabs > li {
+    display: inline-block;
+    position: relative;
+    width: 250px;
+    margin-bottom: 10px;
+    margin-right: 25px;
+}
+.nav-tabs > li > a {
+    border: 0;
+    padding-bottom: 6px;
+    background-color:white;
+    color: #336699;
+    padding-left: 9px;
+    padding-right: 35px;
+}
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+    border: 0;
+    padding-bottom: 4px;
+    border-bottom: 2px solid #336699;
+}
+.nav-tabs .badge{
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 0;
+    position: absolute;
+    left: 221px;
+    padding-bottom: 12px;
+    padding-top: 12px;
+    top: 0px;
+    background-color: #336699;
+}
+
+
+/*
+#Module Artifacts
+```
+<div style="width:400px;" class="example-main-background steel_d1_fill">
+
+        <div class="side_nav_item">
+              <i class="fa fa-chevron-right"></i><span class="single_nav_item">Update Care Plan</span>
+        </div>
+</div>
+
+```
+*/
+
+
+.side_nav_item{
+    background-color:white;
+    padding: 10px;
+    font-size: 16px;
+    color: #535353;
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    border-radius: 3px;
+
+}
+
+
+.side_nav_item:hover{
+    background-color: #dde4e6;
+    cursor: pointer;
+    -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0);
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0);
+}
+
+.side_nav_item i{
+    margin-right: 5px;
+    color: #535353;
+}
+
+/*
+```
+<div style="width:400px;" class="example-main-background steel_d1_fill">
+
+        <div class="side_nav_item_internal">
+             <i class="ico-system icon-circle-plus"></i><span>Add New Diagnosis</span>
+        </div>
+</div>
+
+```
+*/
+
+
+.side_nav_item_internal{
+    display: inline-block;
+    background-color:inherit;
+    padding: 10px;
+    font-size: 16px;
+    color: #535353;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    padding-bottom: 2px;
+    padding-top: 2px;
+}
+
+.side_nav_item_internal span{
+    font-size: 18px;
+    position: relative;
+    top: -7px;
+}
+
+.side_nav_item_internal:hover{
+    cursor: pointer;
+}
+
+.side_nav_item_internal i{
+    margin-right: 5px;
+
+    font-size: 36px;
+    color: #3B80FD;
+}
+
+.side_nav_item_internal:hover i{
+    color: #3573E3;
+}
+.side_nav_item_internal:hover span{
+    color: black;
+}
+
+/*
+```
+<div style="width:400px;" class="example-main-background steel_d1_fill">
+
+        <div class="side_nav_item_internal">
+             <i class="ico-system icon-circle-plus"></i><span>Add Problem</span>
+        </div>
+
+        <div class="side_nav_item_internal">
+             <i class="ico-system icon-circle-plus"></i><span>Add New Diagnosis</span>
+        </div>
+
+
+        <div class="side_nav_item">
+              <i class="fa fa-chevron-right"></i><span class="single_nav_item">Update Care Plan</span>
+        </div>
+
+        <div class="side_nav_item">
+              <i class="fa fa-chevron-right"></i><span class="single_nav_item">Order Lab/Test</span>
+        </div>
+</div>
+
+```
+*/
+
+/*
+```
+<div style="width:900px;" class="example-main-background steel_d1_fill">
+    <ul class="nav nav-tabs" role="tablist">
+          <li><a href="#home" role="tab" data-toggle="tab">Tab Heading <span class="badge">1</span></a></li>
+          <li class="active"><a href="#profile" role="tab" data-toggle="tab">Tab Heading Longer <span class="badge">2</span></a></li>
+          <li><a href="#messages" role="tab" data-toggle="tab">Tab Heading Max Length <span class="badge">11</span></a></li>
+    </ul>
+</div>
+```
+*/
+
+.nav-tabs{
+    border: 0;
+}
+.nav-tabs > li {
+    display: inline-block;
+    position: relative;
+    width: 250px;
+    margin-bottom: 10px;
+    margin-right: 25px;
+}
+.nav-tabs > li > a {
+    border: 0;
+    padding-bottom: 6px;
+    background-color:white;
+    color: #336699;
+    padding-left: 9px;
+    padding-right: 35px;
+}
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+    border: 0;
+    padding-bottom: 4px;
+    border-bottom: 2px solid #336699;
+}
+.nav-tabs .badge{
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 0;
+    position: absolute;
+    left: 221px;
+    padding-bottom: 12px;
+    padding-top: 12px;
+    top: 0px;
+    background-color: #336699;
+}
+
+/*
+##Forms
+*/
+/*
+#Input Fields
+```
+<div style="width:700px;" class="example-main-background steel_d1_fill">
+    <input class="form-control mod_input " type="text" placeholder="Please type here...">
+</div>
+```
+*/
+
+
+.input-lg,
+.form-horizontal .form-group-lg .form-control {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.mod_input{
+    background-color: white;
+    padding: 5px 8px;
+    border: none;
+    border-bottom: 2px solid #535353;
+}
+
+.mod_input::-webkit-input-placeholder {
+    color:#C0CDD1;
+    font-weight: lighter;
+}
+
+.mod_input:-moz-placeholder { /* Firefox 18- */
+    text-shadow: 0;
+}
+
+.mod_input::-moz-placeholder {  /* Firefox 19+ */
+    text-shadow: 0;
+}
+
+.mod_input:-ms-input-placeholder {
+    text-shadow: 0;
+}
+
+/*
+```
+<div style="width:700px;" class="example-main-background steel_d1_fill">
+    <input class="form-control mod_input" type="text" placeholder="Before validation">
+<br><br>
+    <input class="form-control mod_input invalid" type="text" value="Invalid entry">
+<br><br>
+    <input class="form-control mod_input valid" type="text" value="Valid entry">
+<br><br>
+    <input class="form-control mod_input" id="focusedInput" type="text" value="Demonstrative focus state">
+</div>
+```
+*/
+
+input.invalid{
+    border-color:#DD403D;
+}
+
+input.valid{
+    border-color:#3FD655;
+}
+
+.form-control[disabled], .form-control[readonly], fieldset[disabled] .form-control {
+    border-bottom-color: #C0CDD1;
+    background-color: #F7F7F7;
+}
+.form-control[disabled], .form-control[readonly], fieldset[disabled] .form-group label{
+    color: #787878;
+}
+label[disabled]{
+    color: #787878;
+}
+
+.help-block {
+    margin-top: 5px;
+    color: #DD403D;
+    line-height: 13px;
+}
+
+.form-group textarea{
+    margin-bottom: -5px;
+}
+
+/*
+```
+<div style="width:700px;" class="example-main-background steel_d1_fill">
+    <form role="form">
+          <div class="form-group">
+            <label>Default Input</label>
+            <input type="text" class="form-control mod_input" placeholder="Default input">
+            <span class="fa fa-asterisk"></span>
+          </div>
+
+          <div class="form-group">
+            <label>Default Input</label>
+            <input type="text" class="form-control mod_input invalid" placeholder="Default input">
+            <span class="fa fa-asterisk"></span>
+            <span class="help-block red_text">A block of help text that breaks onto a new line and may extend beyond one line.</span>
+          </div>
+    </form>
+</div>
+```
+*/
+
+/*
+```
+<div style="width:800px;" class="example-main-background steel_d1_fill">
+
+    <form role="form">
+
+      <div class="form-group">
+        <label>Large Input</label>
+        <input type="text" class="form-control mod_input input-lg" placeholder="Large input">
+      </div>
+
+      <div class="form-group">
+        <label>Default Input</label>
+        <input type="text" class="form-control mod_input" placeholder="Default input">
+      </div>
+
+      <div class="form-group">
+        <label>Small Input</label>
+        <input type="text" class="form-control mod_input input-sm" placeholder="Small input">
+      </div>
+
+      <div class="form-group">
+        <label>Large Input</label>
+        <input type="text" class="form-control mod_input input-lg" placeholder="Large input">
+        <span class="fa fa-asterisk"></span>
+      </div>
+
+      <div class="form-group">
+        <label>Default Input</label>
+        <input type="text" class="form-control mod_input" placeholder="Default input">
+        <span class="fa fa-asterisk"></span>
+      </div>
+
+      <div class="form-group">
+        <label>Small Input</label>
+        <input type="text" class="form-control mod_input input-sm" placeholder="Small input">
+        <span class="fa fa-asterisk"></span>
+      </div>
+
+    </form>
+
+</div>
+```
+*/
+
+.form-control.mod_input{
+    display: inline-block;
+    width:94%;
+}
+.form-control-static.mod_input{
+    display: inline-block;
+    width:94%;
+}
+/*
+```
+<div style="width:800px;" class="example-main-background steel_d1_fill">
+
+    <form class="form-horizontal" role="form">
+
+      <div class="form-group form-group-lg">
+        <label class="col-sm-2 control-label">Large Input</label>
+        <div class="col-sm-5">
+          <input class="form-control mod_input" type="text" placeholder="Large input">
+          <span class="fa fa-asterisk"></span>
+        </div>
+      </div>
+
+      <div class="form-group form-group-lg">
+        <label class="col-sm-2 control-label">Large Input</label>
+        <div class="col-sm-5">
+          <input class="form-control mod_input" type="text" placeholder="Large input">
+        </div>
+      </div>
+
+      <div class="form-group form-group-md">
+        <label class="col-sm-2 control-label" >Default Input</label>
+        <div class="col-sm-5">
+          <input class="form-control mod_input mod_input_req" type="text" placeholder="Default input">
+          <span class="fa fa-asterisk"></span>
+        </div>
+      </div>
+
+      <div class="form-group form-group-md">
+        <label class="col-sm-2 control-label" >Default Input</label>
+        <div class="col-sm-5">
+          <input class="form-control mod_input mod_input_req" type="text" placeholder="Default input">
+        </div>
+      </div>
+
+      <div class="form-group form-group-sm">
+        <label class="col-sm-2 control-label" >Small Input</label>
+        <div class="col-sm-5">
+          <input class="form-control mod_input" type="text" placeholder="Small input">
+          <span class="fa fa-asterisk"></span>
+        </div>
+      </div>
+
+      <div class="form-group form-group-sm">
+        <label class="col-sm-2 control-label">Small Input</label>
+        <div class="col-sm-5">
+          <input class="form-control mod_input" type="text" placeholder="Small input">
+        </div>
+      </div>
+
+    </form>
+
+</div>
+```
+*/
+
+/*
+```
+<div style="width:700px;" class="example-main-background steel_d1_fill">
+    <label disabled>Small Input</label>
+    <input class="form-control mod_input" type="text" placeholder="Please type here..." disabled>
+</div>
+```
+*/
+
+
+
+
+/*
+#Text Area
+
+```
+<div style="width:700px;" class="example-main-background steel_d1_fill">
+    <div class="form-group">
+       <label>Text Area</label>
+       <textarea class="form-control mod_input" rows="3" placeholder="Please type here..."></textarea>
+    </div>
+</div>
+```
+*/
+
+label{
+    font-weight: 500;
+    line-height: 1;
+    color:#535353;
+}
+
+/*
+```
+<div style="width:700px;" class="example-main-background steel_d1_fill">
+    <form role="form">
+
+      <fieldset disabled>
+          <div class="form-group">
+            <label>Default Disabled Input</label>
+            <input type="text" class="form-control mod_input" placeholder="Please type here...">
+          </div>
+          <div class="form-group">
+            <label>Text Area</label>
+            <textarea class="form-control mod_input" rows="3" placeholder="Please type here..."></textarea>
+            <span class="help-block red_text">A block of help text that breaks onto a new line and may extend beyond one line.</span>
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+      </fieldset>
+
+    </form>
+</div>
+```
+*/
+
+/*
+```
+<div style="width:700px;" class="example-main-background steel_d1_fill">
+    <div class="btn-group btn-group-radio">
+            <label class="btn btn-primary" ><i class="fa fa-circle-o"></i> Option</label>
+            <label class="btn btn-primary active" ><i class="fa fa-dot-circle-o"></i> Option 2</label>
+            <label class="btn btn-primary" ><i class="fa fa-circle-o"></i> Option 3</label>
+            <label class="btn btn-primary" ><i class="fa fa-circle-o"></i> Option 4</label>
+    </div>
+</div>
+```
+*/
+
+.btn-group-radio label{
+    border: 0;
+    padding-bottom: 6px;
+    background-color: white;
+    color: #336699;
+    padding-left: 9px;
+    padding-right: 35px;
+    border-bottom: 2px solid #336699;
+}
+
+.btn-group-radio label:hover{
+    background-color: #dde4e6;
+    color: #336699;
+    border-bottom: 2px solid #336699;
+}
+.btn-group-radio label.active{
+    border-bottom: 2px solid #336699;
+    background-color: #336699;
+    color:white;
+}
+
+/*
+```
+<div style="width:700px;" class="example-main-background steel_d1_fill">
+    <div class="btn-group btn-group-radio-vertical">
+            <label class="btn btn-primary" ><i class="fa fa-circle-o"></i> Option</label>
+            <label class="btn btn-primary active" ><i class="fa fa-dot-circle-o"></i> Option 2</label>
+            <label class="btn btn-primary" ><i class="fa fa-circle-o"></i> Option 3</label>
+            <label class="btn btn-primary" ><i class="fa fa-circle-o"></i> Option 4</label>
+    </div>
+</div>
+```
+*/
+
+.btn-group-radio-vertical label{
+    border: 0;
+    padding-bottom: 6px;
+    background-color: white;
+    color: #336699;
+    padding-left: 9px;
+    padding-right: 35px;
+    border-left: 2px solid #336699;
+    float: none !important;
+    display: block;
+    margin-left: 0!important;
+    text-align: left;
+}
+.btn-group-radio-vertical label:hover{
+    border: 0;
+    background-color: #dde4e6;
+    color: #336699;
+    border-left: 2px solid #336699;
+}
+
+.btn-group-radio-vertical label.active{
+    border-left: 2px solid #336699;
+    background-color: #336699;
+    color:white;
+}
+
+/*
+```
+<div style="width:700px;" class="example-main-background steel_d1_fill">
+    <div style="background:white; padding:10px;">
+        <table class="table table-hover">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>First Name</th>
+                  <th>Last Name</th>
+                  <th>Username</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>Mark</td>
+                  <td>Otto</td>
+                  <td>@mdo</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>Jacob</td>
+                  <td>Thornton</td>
+                  <td>@fat</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td colspan="2">Larry the Bird</td>
+                  <td>@twitter</td>
+                </tr>
+              </tbody>
+            </table>
+        </div>
+</div>
+```
+*/
+thead tr{
+    font-size: 14px;
+    color:#535353;
+}
+
+thead tr .th_sort{
+    color: #336699;
+}
+
+thead tr th{
+    border-bottom: 2px solid  #C0CDD1 !important;
+}
+thead tr .th_sort{
+    border-bottom: 2px solid #336699 !important;
+}
+
+thead tr .active_sort{
+    border-bottom: 2px solid #336699 !important;
+    background: #336699;
+    color: white;
+}
+thead th.active_sort i{
+    margin-left: 4px;
+    opacity: 1;
+    color: white;
+}
+thead th i{
+    margin-left: 4px;
+    opacity: 0.3;
+}
+thead .th_sort:hover{
+    background-color: #dde4e6;
+    color: #336699;
+    cursor: pointer;
+}
+thead tr .active_sort:hover{
+    border-bottom: 2px solid #336699 !important;
+    background: #336699;
+    color: white;
+}
+/*
+#Tables
+
+Use the "active_sort" class on the <th> element of the sorted row. In addition the icon needs to be switched from to or.
+Different colorations are avalible for the individual rows by applying the following classes:
+Active, success, primary,info, warning, danger.
+
+    <div style="background:white; padding:10px;">
+        <table class="table table-hover">
+              <thead>
+                <tr>
+                  <th>Class Name</th>
+                  <th>Use</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Active</td>
+                  <td>Indicates the element is selected</td>
+                </tr>
+                <tr>
+                  <td>Success</td>
+                  <td>Shows approved or completed</td>
+                </tr>
+                <tr>
+                  <td>primary</td>
+                  <td>@twitter</td>
+                </tr>
+              </tbody>
+          </table>
+     </div>
+
+
+
+
+```
+<div style="width:700px;" class="example-main-background steel_d1_fill">
+    <div style="background:white; padding:10px;">
+        <table class="table table-hover">
+              <thead>
+                <tr >
+                  <th class="th_sort active_sort">#<i class="fa fa-sort-desc"></i></th>
+                  <th class="th_sort"></i>Column heading<i class="fa fa-sort"></th>
+                  <th class="th_sort">Column heading<i class="fa fa-sort"></th>
+                  <th>Column no-sort</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="active">
+                  <td>1</td>
+                  <td>Column content</td>
+                  <td>Column content</td>
+                  <td>Column content</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>Column content</td>
+                  <td>Column content</td>
+                  <td>Column content</td>
+                </tr>
+                <tr class="success">
+                  <td>3</td>
+                  <td>Column content</td>
+                  <td>Column content</td>
+                  <td>Column content</td>
+                </tr>
+                <tr class="primary">
+                  <td>4</td>
+                  <td>Column content</td>
+                  <td>Column content</td>
+                  <td>Column content</td>
+                </tr>
+                <tr class="info">
+                  <td>5</td>
+                  <td>Column content</td>
+                  <td>Column content</td>
+                  <td>Column content</td>
+                </tr>
+                <tr>
+                  <td>6</td>
+                  <td>Column content</td>
+                  <td>Column content</td>
+                  <td>Column content</td>
+                </tr>
+                <tr class="warning">
+                  <td>7</td>
+                  <td>Column content</td>
+                  <td>Column content</td>
+                  <td>Column content</td>
+                </tr>
+                <tr>
+                  <td>8</td>
+                  <td>Column content</td>
+                  <td>Column content</td>
+                  <td>Column content</td>
+                </tr>
+                <tr class="danger">
+                  <td>9</td>
+                  <td>Column content</td>
+                  <td>Column content</td>
+                  <td>Column content</td>
+                </tr>
+
+              </tbody>
+            </table>
+        </div>
+</div>
+```
+*/
+
+
+
+/*
+#Modal
+
+
+```
+<div class="bs-example-modal"><!-- demo div only -->
+
+    <div class="modal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header lightgray_fill">
+            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            <h4 class="modal-title">Modal title</h4>
+          </div>
+          <div class="modal-body">
+            <p>One fine body&hellip;</p>
+          </div>
+          <div class="modal-footer lightgray_fill">
+            <button type="button" class="btn btn-success">Save changes</button>
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+</div><!-- /demo div only -->
+```
+*/
+
+.bs-example-modal .modal {
+    position: relative;
+    top: auto;
+    right: auto;
+    bottom: auto;
+    left: auto;
+    z-index: 1;
+    display: block;
+}
+
+.bs-example-modal .modal-dialog {
+    left: auto;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.modal-header {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.modal-footer {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.modal-title{
+    color:#787878;
+}
+
+/*
+#Modal Alerts
+
+
+```
+<div class="bs-example-modal"><!-- demo div only -->
+
+    <div class="modal modal-alert-red">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header red_fill">
+            <h4 class="modal-title">Modal title</h4>
+          </div>
+          <div class="modal-body">
+            <p>One fine body&hellip;</p>
+          </div>
+          <div class="modal-footer red_fill">
+            <button type="button" class="btn btn-white">OVERRIDE</button>
+            <button type="button" class="btn btn-white" data-dismiss="modal">Cancel</button>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+</div><!-- /demo div only -->
+```
+```
+<div class="bs-example-modal"><!-- demo div only -->
+
+    <div class="modal modal-alert-steelblue">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header steelblue_fill">
+            <h4 class="modal-title">Modal title</h4>
+          </div>
+          <div class="modal-body">
+            <p>One fine body&hellip;</p>
+          </div>
+          <div class="modal-footer steelblue_fill">
+            <button type="button" class="btn btn-success">Save Changes</button>
+            <button type="button" class="btn btn-white" data-dismiss="modal">Leave</button>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+</div><!-- /demo div only -->
+```
+```
+<div class="bs-example-modal"><!-- demo div only -->
+
+    <div class="modal modal-alert-green">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header green_fill">
+            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            <h4 class="modal-title">Modal title</h4>
+          </div>
+          <div class="modal-body">
+            <p>New Patient Added&hellip;</p>
+          </div>
+          <div class="modal-footer green_fill">
+            <button type="button" class="btn btn-primary" data-dismiss="modal">Edit</button>
+            <button type="button" class="btn btn-white" data-dismiss="modal">Close</button>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+</div><!-- /demo div only -->
+```
+*/
+
+.modal-alert-red .modal-title{
+    color:white;
+}
+
+.modal-alert-red .modal-content{
+    border: 1px solid #DD403D;
+}
+
+.modal-alert-steelblue .modal-title{
+    color:white;
+}
+.modal-alert-steelblue .modal-content{
+    border: 1px solid #336699;
+}
+
+.modal-alert-green .modal-title{
+    color:white;
+}
+
+.modal-alert-green .modal-content{
+    border: 1px solid #3FD655;
+}
+
+.modal-content{
+    border-radius: 4px;
+    border: 1px solid #D1D1D1;
+    overflow: hidden;
+}
+
+/*
+```
+<div style="width:900px;" class="example-main-background steel_d1_fill">
+    <ul class="nav nav-tabs-flex" role="tablist">
+          <li><a href="#home" role="tab" data-toggle="tab">Small <span class="badge">1</span></a></li>
+          <li class="active"><a href="#profile" role="tab" data-toggle="tab">Longer Tab <span class="badge">2</span></a></li>
+          <li><a href="#messages" role="tab" data-toggle="tab">Tab Heading Max Length <span class="badge">11</span></a></li>
+    </ul>
+</div>
+```
+*/
+
+.nav-tabs-flex{
+    border: 0;
+}
+.nav-tabs-flex > li {
+    display: inline-block;
+    position: relative;
+    margin-bottom: 10px;
+    margin-right: 25px;
+    min-width: 100px;
+}
+.nav-tabs-flex > li > a {
+    border: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    background-color:white;
+    color: #336699;
+    padding-left: 9px;
+    padding-right: 0px;
+}
+.nav-tabs-flex > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+    border: 0;
+    height: 37px;
+    border-bottom: 2px solid #336699;
+}
+
+
+.nav-tabs-flex .badge{
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 0;
+    padding-bottom: 12px;
+    padding-top: 12px;
+    top: 0px;
+    background-color: #336699;
+    margin-left: 15px;
+}
+
+/*
+#Schedual Items
+
+```
+<div style="width:500px;" class="example-main-background steel_d1_fill">
+
+    <div class="item_list">
+        <div class="item_list_title">
+             <span>Overdue</span>
+        </div>
+        <div class="single_item single_item_hover time_item">
+             <span class="single_item_title">Jessica Rogers #843032</span>
+             <span class="single_item_time">12:15<span class="time_ampm">AM</span></span>
+             <span class="single_item_desc">Messages</span>
+        </div>
+        <div class="single_item single_item_hover time_item">
+             <span class="single_item_title">Eddie Vedder #831253</span>
+             <span class="single_item_time">1:43<span class="time_ampm">PM</span></span>
+             <span class="single_item_desc">Labs & Results</span>
+        </div>
+    </div>
+
+</div>
+
+```
+
+
+*/
+
+.single_item.time_item .single_item_title{
+    font-size: 12px;
+    text-transform: uppercase;
+    line-height: 14px;
+    font-weight: 800;
+    display: block;
+    float: left;
+    max-width: 72%;
+}
+
+.single_item.time_item .single_item_desc{
+    font-size: 12px;
+    display: block;
+    clear: both;
+}
+
+.single_item.time_item .single_item_time{
+    display: block;
+    float: right;
+    font-size: 14px;
+}
+.single_item_time .time_ampm{
+    font-size: 10px;
+    font-weight: bold;
+    color:#535353;
+    margin-left: 1px;
+}
+
+/*
+#Split Action Nav
+
+```
+<div style="width:650px;" class="example-main-background steel_d1_fill">
+
+    <div class="mod_action_nav">
+        <div class="align-left">
+            <button type="button" class="btn btn-primary"><span class="fa fa-clock-o"></span> Post Pone</button>
+            <button type="button" class="btn btn-primary"><span class="fa fa-share-square-o"></span> Route</button>
+            <button type="button" class="btn btn-danger"><span class="fa fa-check-square-o"></span> Sign Off</button>
+
+        </div>
+
+        <div class="align-right">
+            <button type="button" class="btn btn-link"><span class="fa fa-arrows-alt"></span> Fullscreen</button>
+        </div>
+    </div>
+
+</div>
+```
+
+*/
+.mod_action_nav{
+    overflow: hidden;
+}
+.mod_action_nav .nav_item{
+    font-size: 14px;
+}
+.mod_action_nav .align-left{
+    display: inline-block;
+}
+
+.mod_action_nav .align-right{
+    display: inline-block;
+    float: right;
+}
+
+.mod_action_nav .btn-link{
+    font-size: 18px;
+    text-decoration: none;
+}
+
+
+/*
+#Checkbox
+
+```
+<div style="width:650px;" class="example-main-background steel_d1_fill">
+
+    <div class="checkbox-custom"><i class="fa fa-check"></i></div>
+    <div class="checkbox-custom checked"><i class="fa fa-check"></i></div>
+
+</div>
+```
+
+*/
+
+.checkbox-custom{
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+    background-color: white;
+    position: relative;
+    cursor: pointer;
+    border: 3px solid #535353;
+}
+.checkbox-custom:hover{
+    border-color: #3573E3;
+}
+.checkbox-custom .fa-check{
+    position: absolute;
+    top: 0px;
+    font-size: 19px;
+    left: 0px;
+    color: #3B80FD;
+    opacity: 0;
+}
+.checkbox-custom:hover .fa-check{
+    color: #3B80FD;
+    opacity: 0.2;
+}
+
+.checkbox-custom.checked{
+    border-color: #3B80FD;
+}
+.checkbox-custom.checked .fa-check{
+    opacity: 1;
+}
+
+.checkbox >label > .checkbox-custom {
+    top: 6px;
+    margin-right: 5px;
+}
+.checkbox >label:hover > .checkbox-custom {
+    border-color: #3573E3;
+}
+.checkbox >label:hover > .checkbox-custom > .fa-check{
+    color: #3B80FD;
+    opacity: 0.2;
+}
+/*
+#Checkbox w/ Label
+
+```
+<div style="width:700px;" class="example-main-background steel_d1_fill">
+
+    <div class="form-group">
+         <div class="checkbox">
+            <label><div class="checkbox-custom"><i class="fa fa-check"></i></div>Check me out</label>
+         </div>
+    </div>
+
+</div>
+```
+
+*/
+
+/*
+#Problem List Main
+
+```
+<div class="example-main-background steel_d1_fill">
+<div class="main_problem_list">
+    <div class="single_item_group">
+        <div class="single_item single_item_hover status_gray">
+            <div class="item_info">
+               <span class="item_problem_name">Elevated Blood Pressure Reading Without Diagnosis</span>
+               <span class="gray_d3_text font-12px">NEWONSET:09/10/2014 BY DR.SHILPA AJIT</span>
+               <span class="font-15px">Test text here<span>
+            </div>
+            <div class="item_sub_info">
+               <span class="red_text font-13px font-bold">XX(0.368)</span>
+               <span class="gray_d3_text font-12px">ONSET: 08/20/2014</span>
+               <span class="gray_d3_text font-12px">BY DR.ROBERT SIMONS<span>
+            </div>
+        </div>
+        <div class="single_item_actions">
+               <button class="btn-link font-18px"><i class="fa fa-cog"></i> </button>
+        </div>
+    </div>
+    <div class="single_item_group">
+        <div class="single_item single_item_hover status_blue">
+            <div class="item_info">
+               <span class="item_problem_name">Elevated Blood Pressure Reading Without Diagnosis</span>
+               <span class="gray_d3_text font-12px">NEWONSET:09/10/2014 BY DR.SHILPA AJIT</span>
+               <span class="font-15px">Test text here<span>
+            </div>
+            <div class="item_sub_info">
+               <span class="red_text font-13px font-bold">XX(0.368)</span>
+               <span class="gray_d3_text font-12px">ONSET: 08/20/2014</span>
+               <span class="gray_d3_text font-12px">BY DR.ROBERT SIMONS<span>
+            </div>
+        </div>
+        <div class="single_item_actions">
+               <button class="btn-link font-18px"><i class="fa fa-cog"></i> </button>
+        </div>
+    </div>
+    <div class="single_item_group">
+        <div class="single_item single_item_hover status_green">
+            <div class="item_info">
+               <span class="item_problem_name">Elevated Blood Pressure Reading Without Diagnosis</span>
+               <span class="gray_d3_text font-12px">NEWONSET:09/10/2014 BY DR.SHILPA AJIT</span>
+               <span class="font-15px">Test text here<span>
+            </div>
+            <div class="item_sub_info">
+               <span class="red_text font-13px font-bold">XX(0.368)</span>
+               <span class="gray_d3_text font-12px">ONSET: 08/20/2014</span>
+               <span class="gray_d3_text font-12px">BY DR.ROBERT SIMONS<span>
+            </div>
+        </div>
+        <div class="single_item_actions">
+               <button class="btn-link font-18px"><i class="fa fa-cog"></i> </button>
+        </div>
+    </div>
+    <div class="single_item_group">
+        <div class="single_item single_item_hover status_yellow">
+            <div class="item_info">
+               <span class="item_problem_name">Elevated Blood Pressure Reading Without Diagnosis</span>
+               <span class="gray_d3_text font-12px">NEWONSET:09/10/2014 BY DR.SHILPA AJIT</span>
+               <span class="font-15px">Test text here<span>
+            </div>
+            <div class="item_sub_info">
+               <span class="red_text font-13px font-bold">XX(0.368)</span>
+               <span class="gray_d3_text font-12px">ONSET: 08/20/2014</span>
+               <span class="gray_d3_text font-12px">BY DR.ROBERT SIMONS<span>
+            </div>
+        </div>
+        <div class="single_item_actions">
+               <button class="btn-link font-18px"><i class="fa fa-cog"></i> </button>
+        </div>
+    </div>
+        <div class="single_item_group">
+        <div class="single_item single_item_hover status_red">
+            <div class="item_info">
+               <span class="item_problem_name">Elevated Blood Pressure Reading Without Diagnosis</span>
+               <span class="gray_d3_text font-12px">NEWONSET:09/10/2014 BY DR.SHILPA AJIT</span>
+               <span class="font-15px">Test text here<span>
+            </div>
+            <div class="item_sub_info">
+               <span class="red_text font-13px font-bold">XX(0.368)</span>
+               <span class="gray_d3_text font-12px">ONSET: 08/20/2014</span>
+               <span class="gray_d3_text font-12px">BY DR.ROBERT SIMONS<span>
+            </div>
+        </div>
+        <div class="single_item_actions">
+               <button class="btn-link font-18px"><i class="fa fa-cog"></i> </button>
+        </div>
+    </div>
+
+</div>
+</div>
+```
+
+*/
+.single_item_group{
+    overflow: hidden;
+
+}
+.main_problem_list > .single_item > div{
+    float:left;
+    display:block;
+}
+
+.main_problem_list > .single_item > div:last-child{
+    float:right;
+    display:block;
+}
+.single_item_group > div{
+    float:left;
+    display:block;
+}
+
+.single_item_group > div:last-child{
+    float:right;
+    display:block;
+}
+.single_item_group .single_item > div{
+    float:left;
+    display:block;
+}
+
+.single_item_group .single_item > div:last-child{
+    float:right;
+    display:block;
+}
+
+.main_problem_list .item_info{
+    width: 75%;
+    text-align: left;
+}
+
+.main_problem_list .item_sub_info{
+    width: 25%;
+    text-align: right;
+}
+.main_problem_list .single_item_actions{
+    width: 6%;
+    float:left;
+}
+.main_problem_list .single_item.status_gray {
+    border-left:4px solid #bcbcbc;
+}
+.main_problem_list .single_item.status_blue {
+    border-left:4px solid #3B80FD;
+}
+.main_problem_list .single_item.status_yellow {
+    border-left:4px solid #FDB83B;
+}
+.main_problem_list .single_item.status_green {
+    border-left:4px solid #3FD655;
+}
+.main_problem_list .single_item.status_red {
+    border-left:4px solid #DD403D;
+}
+.main_problem_list .single_item span{
+    display: block;
+}
+.main_problem_list .single_item{
+    overflow: hidden;
+    width: 94%;
+}
+.main_problem_list .item_problem_name {
+    margin-bottom: 0px;
+    font-size: 18px;
+    font-weight: normal;
+    line-height: 1.2;
+}
+
+/*
+#Sort
+```
+<div style="width:500px;" class="example-main-background steel_d1_fill">
+    <ul class="sort_select" >
+          <li class="gray_d4_text font-14px">SORT BY:</li>
+          <li class="sort_select_btn"><span>HCC</span><i class="fa fa-sort"></i></li>
+          <li class="sort_select_btn active"><span>Name</span><i class="fa fa-caret-down"></i></li>
+          <li class="sort_select_btn"><span>Date</span><i class="fa fa-sort"></i></li>
+    </ul>
+</div>
+```
+*/
+
+.sort_select{
+    padding-left: 0;
+}
+.sort_select li{
+    list-style: none;
+    display: inline-block;
+}
+
+.sort_select_btn:hover{
+    color: #336699;
+    background: none;
+    border: 1px solid #336699;
+}
+.sort_select_btn span{
+    margin-right: 4px;
+}
+
+.sort_select_btn.active{
+    color: #336699;
+    background: none;
+    border: 1px solid #336699;
+}
+
+.sort_select_btn{
+    padding: 4px;
+    margin: 0;
+    border-radius: 2px;
+    cursor: pointer;
+    min-width: 55px;
+    text-align: center;
+    padding-bottom: 1px;
+    padding-top: 1px;
+    border: 1px solid #BCBCBC;
+    color: #383737;
+}
+.sort_select_btn .fa{
+    opacity: 0.3;
+}
+
+.sort_select_btn.active .fa{
+    opacity: 1;
+}
+
+/*
+#Dropdown
+```
+<div style="width:500px;" class="example-main-background steel_d1_fill">
+
+    <div class="btn-group btn-input clearfix">
+         <button type="button" class="btn btn-default-dropdown dropdown-toggle form-control" data-toggle="dropdown">
+           <span data-bind="label">Select One</span>&nbsp;<span class="caret"></span>
+         </button>
+         <ul class="dropdown-menu" role="menu">
+           <li><a href="#">Item</a></li>
+           <li><a href="#">Another item</a></li>
+           <li><a href="#">This is a longer item</a></li>
+         </ul>
+    </div>
+
+</div>
+```
+*/
+.btn-input {
+    display: block;
+}
+
+.btn-input .btn.form-control {
+    text-align: left;
+}
+
+.btn-input .btn.form-control span:first-child {
+    left: 10px;
+    overflow: hidden;
+    position: absolute;
+    right: 25px;
+}
+
+.btn-input .btn.form-control .caret {
+    margin-top: -1px;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+}
+
+.btn-default-dropdown.dropdown-toggle{
+    color: #ffffff;
+    border-color: #535353;
+    color:black;
+}
+
+.btn-default-dropdown:hover, .btn-default-dropdown:focus, .btn-default-dropdown:active, .btn-default-dropdown.active, .open > .dropdown-toggle.btn-default-dropdown {
+    color: #ffffff;
+    background-color: #336699;;
+    border-color: #336699;;
+}

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html ng-app="treeGridTest">
+  <head>
+    <!-- for local development -->    
+    <!-- <link rel="stylesheet" href="../lib/bootstrap/css/bootstrap.min.css">-->
+    <!-- <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css"> -->
+    <!--<script data-main="js/main" src="js/libs/require/require.js"></script>-->
+
+    <!-- devtest8.chenmed.local -->
+    <link href="css/bootstrap_cos_theme.css" rel="stylesheet">
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">    
+    <link rel="stylesheet" href="linearicons/style.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!--[if lt IE 9]><script src="../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+
+
+    <link rel="stylesheet" href="dist/ladda-themeless.min.css">
+    <script src="dist/spin.min.js"></script>
+    <script src="dist/ladda.min.js"></script> 
+
+    <link rel="stylesheet" href="src/treeGrid.css">
+
+
+    <link rel="stylesheet" href="dist/ladda-themeless.min.css">
+    <link rel="stylesheet" href="css/prism.css">
+
+    <script src="assets/js/ie10-viewport-bug-workaround.js"></script>
+    <script src="assets/js/ie-emulation-modes-warning.js"></script>
+
+  </head>
+  <body id="angular_treeGridController" ng-controller="treeGridController" style="margin:20px">
+
+    <div class="well" ng-model="showMinDir" ng-value="false">
+      
+ 
+	<div ng-show="!showMinDir"> 
+        	<button ng-click="showMinDir=true" class="btn btn-default">Search Terminology</button>
+	</div>
+
+        <div ng-show="showMinDir" >
+
+            <button ng-click="showMinDir=false" class="btn btn-default">Hide Terminology</button>
+            <br/><br/>
+	    	<div class="main_nav_search">
+	    		<input id="search_text" class="blue_fill" placeholder="Search Term" ng-model="actionText" /><i class="fa fa-search"></i>
+	    	</div>
+	    <br />
+	    <span class="input-group-btn">
+		<div class="progress-loading">
+			<button id="search_submit" class="btn btn-primary ladda-button" data-style="expand-right"  ng-click="addNewItem(actionText)" />
+				<span class="ladda-label">Search</span>
+			</button>
+		</div>
+	   </span>
+            <br/>
+		<a ng-click="my_tree.expand_all()" class="ico-system icon-chevron-down" ng-show="page > 0"></a>
+		<a ng-click="my_tree.collapse_all()" class="ico-system icon-chevron-up" ng-show="page > 0"></a>
+ 
+            <tree-grid tree-data="tree_data" tree-control="my_tree" col-defs="col_defs" expand-on="expanding_property" on-select="my_tree_handler(branch)" expand-level="2" icon-leaf= "glyphicon glyphicon-asterisk" ng-show="page > 0"></tree-grid>
+
+	
+	    <div class="progress-loading">
+	    	<button id="search_prev_submit" class="btn btn-primary ladda-button" data-style="expand-right"  ng-click="prev()" ng-show="page > 0" >
+			<span class="ladda-label">Prev</span>
+		</button>
+	    	<button id="search_next_submit" class="btn btn-primary ladda-button" data-style="expand-right" ng-click="next()" ng-show="page > 0">
+			<span class="ladda-label">Next</span>
+		</button>
+	    </div>
+
+	    <div ng-show="page > 0">Page {{page}}</div> 
+	    <br/>
+	    <div>
+		<span class="label label-info">{{branch}}</span>
+	    </div>
+    	    <!-- <button id="submit_save_term" class="btn btn-success btn-save" type="submit">SAVE</button> -->
+	 </div>
+    </div>
+
+
+    <!-- for local development -->
+    <!--
+        <script src="../lib/angular/angular.min.js"></script>
+    -->
+
+    <!-- Always put jQuery before AngularJs -->
+    <script src="js/jquery.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.12/angular.js"></script>
+    <script src="js/ngStorage.min.js"></script>
+
+
+    <script src="src/tree-grid-directive.js"></script>    
+    <script src="treeGridTerms.js"></script>
+    <script src="dist/js/bootstrap.min.js"></script>
+    <script src="js/ui-bootstrap-tpls-0.11.0.min.js"></script>
+    <script src="js/angular-script.js"></script>
+  
+    <script>
+	//Ladda.bind('.progress-loading button', {timeout:7000});
+	Ladda.bind('input[type=submit]');
+
+
+	// Loading Timer, done when scope.loading set to false
+	function loading_timer(ladda){
+			ladda.start();
+			setTimeout(function(){
+		            var runTimes = 0;
+			    function wait(){
+				if(angular.element("#angular_treeGridController").scope().loading == true){
+					setTimeout(function(){
+						runTimes++;
+						//console.log(runTimes);
+						wait();
+					}, 300);
+				}else{
+					ladda.stop();	
+				}	
+			    }
+			    wait();
+			}, 100);
+	}
+
+	// Buttons for Searching, Next and Previous
+	$(function(){
+		$('#search_text').keypress(function(handler) {
+			//console.log(handler);
+			// User pressed the Enter Key to Search
+			if(handler.keyCode == 13){
+				$('#search_submit').trigger("click");
+			}
+		});
+		$('#search_submit').click(function() {
+			var l = Ladda.create(this);
+			var search_text = $('#search_text').val();
+			console.log(search_text.length);
+			if(search_text.length == 0){
+				alert("No search term string entered.");
+			}else{
+				console.log("start searching...");
+				angular.element("#angular_treeGridController").scope().searchTerm(search_text);
+				loading_timer(l);	
+			}
+		});
+		$('#search_next_submit').click(function(){
+			var l = Ladda.create(this);
+			console.log("calling next...");
+			loading_timer(l);
+		});
+		$('#search_prev_submit').click(function(){
+			var l = Ladda.create(this);
+			console.log("calling prev...");
+			loading_timer(l);
+		});
+	});
+    </script>
+
+
+</body>
+</html>

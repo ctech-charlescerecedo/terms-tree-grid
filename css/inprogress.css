@@ -1,0 +1,768 @@
+/*
+```
+<div style="width:900px;" class="example-main-background steel_d1_fill">
+    <ul class="nav nav-tabs-flex" role="tablist">
+          <li><a href="#home" role="tab" data-toggle="tab">Small <span class="badge">1</span></a></li>
+          <li class="active"><a href="#profile" role="tab" data-toggle="tab">Longer Tab <span class="badge">2</span></a></li>
+          <li><a href="#messages" role="tab" data-toggle="tab">Tab Heading Max Length <span class="badge">11</span></a></li>
+    </ul>
+</div>
+```
+*/
+
+.nav-tabs-flex{
+    border: 0;
+}
+.nav-tabs-flex > li {
+    display: inline-block;
+    position: relative;
+    margin-bottom: 10px;
+    margin-right: 25px;
+    min-width: 100px;
+}
+.nav-tabs-flex > li > a {
+    border: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    background-color:white;
+    color: #336699;
+    padding-left: 9px;
+    padding-right: 0px;
+}
+.nav-tabs-flex > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+    border: 0;
+    height: 37px;
+    border-bottom: 2px solid #336699;
+}
+
+
+.nav-tabs-flex .badge{
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 0;
+    padding-bottom: 12px;
+    padding-top: 12px;
+    top: 0px;
+    background-color: #336699;
+    margin-left: 15px;
+}
+
+/*
+#Schedual Items
+
+```
+<div style="width:500px;" class="example-main-background steel_d1_fill">
+
+    <div class="item_list">
+        <div class="item_list_title">
+             <span>Overdue</span>
+        </div>
+        <div class="single_item single_item_hover time_item">
+             <span class="single_item_title">Jessica Rogers #843032</span>
+             <span class="single_item_time">12:15<span class="time_ampm">AM</span></span>
+             <span class="single_item_desc">Messages</span>
+        </div>
+        <div class="single_item single_item_hover time_item">
+             <span class="single_item_title">Eddie Vedder #831253</span>
+             <span class="single_item_time">1:43<span class="time_ampm">PM</span></span>
+             <span class="single_item_desc">Labs & Results</span>
+        </div>
+    </div>
+
+</div>
+
+```
+
+
+*/
+
+.single_item.time_item .single_item_title{
+    font-size: 12px;
+    text-transform: uppercase;
+    line-height: 14px;
+    font-weight: 800;
+    display: block;
+    float: left;
+    max-width: 72%;
+}
+
+.single_item.time_item .single_item_desc{
+    font-size: 12px;
+    display: block;
+    clear: both;
+}
+
+.single_item.time_item .single_item_time{
+    display: block;
+    float: right;
+    font-size: 14px;
+}
+.single_item_time .time_ampm{
+    font-size: 10px;
+    font-weight: bold;
+    color:#535353;
+    margin-left: 1px;
+}
+
+/*
+#Split Action Nav
+
+```
+<div style="width:650px;" class="example-main-background steel_d1_fill">
+
+    <div class="mod_action_nav">
+        <div class="align-left">
+            <button type="button" class="btn btn-primary"><span class="fa fa-clock-o"></span> Post Pone</button>
+            <button type="button" class="btn btn-primary"><span class="fa fa-share-square-o"></span> Route</button>
+            <button type="button" class="btn btn-danger"><span class="fa fa-check-square-o"></span> Sign Off</button>
+
+        </div>
+
+        <div class="align-right">
+            <button type="button" class="btn btn-link"><span class="fa fa-arrows-alt"></span> Fullscreen</button>
+        </div>
+    </div>
+
+</div>
+```
+
+*/
+.mod_action_nav{
+overflow: hidden;
+}
+.mod_action_nav .nav_item{
+font-size: 14px;
+}
+.mod_action_nav .align-left{
+display: inline-block;
+}
+
+.mod_action_nav .align-right{
+display: inline-block;
+float: right;
+}
+
+.mod_action_nav .btn-link{
+font-size: 18px;
+text-decoration: none;
+}
+
+
+/*
+#Checkbox
+
+```
+<div style="width:650px;" class="example-main-background steel_d1_fill">
+
+    <div class="checkbox-custom"><i class="fa fa-check"></i></div>
+    <div class="checkbox-custom checked"><i class="fa fa-check"></i></div>
+
+</div>
+```
+
+*/
+
+.checkbox-custom{
+ width: 25px;
+ height: 25px;
+ display: inline-block;
+ background-color: white;
+position: relative;
+cursor: pointer;
+border: 3px solid #535353;
+ }
+.checkbox-custom:hover{
+    border-color: #3573E3;
+}
+.checkbox-custom .fa-check{
+    position: absolute;
+    top: 0px;
+    font-size: 19px;
+    left: 0px;
+    color: #3B80FD;
+    opacity: 0;
+}
+.checkbox-custom:hover .fa-check{
+    color: #3B80FD;
+    opacity: 0.2;
+}
+
+.checkbox-custom.checked{
+    border-color: #3B80FD;
+}
+.checkbox-custom.checked .fa-check{
+    opacity: 1;
+}
+
+.checkbox >label > .checkbox-custom {
+top: 6px;
+margin-right: 5px;
+}
+.checkbox >label:hover > .checkbox-custom {
+    border-color: #3573E3;
+}
+.checkbox >label:hover > .checkbox-custom > .fa-check{
+    color: #3B80FD;
+    opacity: 0.2;
+}
+/*
+#Checkbox w/ Label
+
+```
+<div style="width:700px;" class="example-main-background steel_d1_fill">
+
+    <div class="form-group">
+         <div class="checkbox">
+            <label><div class="checkbox-custom"><i class="fa fa-check"></i></div>Check me out</label>
+         </div>
+    </div>
+
+</div>
+```
+
+*/
+
+/*
+#Problem List Main
+
+```
+<div class="example-main-background steel_d1_fill">
+<div class="main_problem_list">
+    <div class="single_item_group">
+        <div class="single_item single_item_hover status_gray">
+            <div class="item_info">
+               <span class="item_problem_name">Elevated Blood Pressure Reading Without Diagnosis</span>
+               <span class="gray_d3_text font-12px">NEWONSET:09/10/2014 BY DR.SHILPA AJIT</span>
+               <span class="font-15px">Test text here<span>
+            </div>
+            <div class="item_sub_info">
+               <span class="red_text font-13px font-bold">XX(0.368)</span>
+               <span class="gray_d3_text font-12px">ONSET: 08/20/2014</span>
+               <span class="gray_d3_text font-12px">BY DR.ROBERT SIMONS<span>
+            </div>
+        </div>
+        <div class="single_item_actions">
+               <button class="btn-link font-18px"><i class="fa fa-cog"></i> </button>
+        </div>
+    </div>
+    <div class="single_item_group">
+        <div class="single_item single_item_hover status_blue">
+            <div class="item_info">
+               <span class="item_problem_name">Elevated Blood Pressure Reading Without Diagnosis</span>
+               <span class="gray_d3_text font-12px">NEWONSET:09/10/2014 BY DR.SHILPA AJIT</span>
+               <span class="font-15px">Test text here<span>
+            </div>
+            <div class="item_sub_info">
+               <span class="red_text font-13px font-bold">XX(0.368)</span>
+               <span class="gray_d3_text font-12px">ONSET: 08/20/2014</span>
+               <span class="gray_d3_text font-12px">BY DR.ROBERT SIMONS<span>
+            </div>
+        </div>
+        <div class="single_item_actions">
+               <button class="btn-link font-18px"><i class="fa fa-cog"></i> </button>
+        </div>
+    </div>
+    <div class="single_item_group">
+        <div class="single_item single_item_hover status_green">
+            <div class="item_info">
+               <span class="item_problem_name">Elevated Blood Pressure Reading Without Diagnosis</span>
+               <span class="gray_d3_text font-12px">NEWONSET:09/10/2014 BY DR.SHILPA AJIT</span>
+               <span class="font-15px">Test text here<span>
+            </div>
+            <div class="item_sub_info">
+               <span class="red_text font-13px font-bold">XX(0.368)</span>
+               <span class="gray_d3_text font-12px">ONSET: 08/20/2014</span>
+               <span class="gray_d3_text font-12px">BY DR.ROBERT SIMONS<span>
+            </div>
+        </div>
+        <div class="single_item_actions">
+               <button class="btn-link font-18px"><i class="fa fa-cog"></i> </button>
+        </div>
+    </div>
+    <div class="single_item_group">
+        <div class="single_item single_item_hover status_yellow">
+            <div class="item_info">
+               <span class="item_problem_name">Elevated Blood Pressure Reading Without Diagnosis</span>
+               <span class="gray_d3_text font-12px">NEWONSET:09/10/2014 BY DR.SHILPA AJIT</span>
+               <span class="font-15px">Test text here<span>
+            </div>
+            <div class="item_sub_info">
+               <span class="red_text font-13px font-bold">XX(0.368)</span>
+               <span class="gray_d3_text font-12px">ONSET: 08/20/2014</span>
+               <span class="gray_d3_text font-12px">BY DR.ROBERT SIMONS<span>
+            </div>
+        </div>
+        <div class="single_item_actions">
+               <button class="btn-link font-18px"><i class="fa fa-cog"></i> </button>
+        </div>
+    </div>
+        <div class="single_item_group">
+        <div class="single_item single_item_hover status_red">
+            <div class="item_info">
+               <span class="item_problem_name">Elevated Blood Pressure Reading Without Diagnosis</span>
+               <span class="gray_d3_text font-12px">NEWONSET:09/10/2014 BY DR.SHILPA AJIT</span>
+               <span class="font-15px">Test text here<span>
+            </div>
+            <div class="item_sub_info">
+               <span class="red_text font-13px font-bold">XX(0.368)</span>
+               <span class="gray_d3_text font-12px">ONSET: 08/20/2014</span>
+               <span class="gray_d3_text font-12px">BY DR.ROBERT SIMONS<span>
+            </div>
+        </div>
+        <div class="single_item_actions">
+               <button class="btn-link font-18px"><i class="fa fa-cog"></i> </button>
+        </div>
+    </div>
+
+</div>
+</div>
+```
+
+*/
+.single_item_group{
+overflow: hidden;
+
+}
+.main_problem_list > .single_item > div{
+    float:left;
+    display:block;
+}
+
+.main_problem_list > .single_item > div:last-child{
+    float:right;
+    display:block;
+}
+.single_item_group > div{
+    float:left;
+    display:block;
+}
+
+.single_item_group > div:last-child{
+    float:right;
+    display:block;
+}
+.single_item_group .single_item > div{
+    float:left;
+    display:block;
+}
+
+.single_item_group .single_item > div:last-child{
+    float:right;
+    display:block;
+}
+
+.main_problem_list .item_info{
+    width: 75%;
+    text-align: left;
+}
+
+.main_problem_list .item_sub_info{
+    width: 25%;
+    text-align: right;
+}
+.main_problem_list .single_item_actions{
+    width: 6%;
+    float:left;
+}
+.main_problem_list .single_item.status_gray {
+   border-left:4px solid #bcbcbc;
+}
+.main_problem_list .single_item.status_blue {
+    border-left:4px solid #3B80FD;
+}
+.main_problem_list .single_item.status_yellow {
+    border-left:4px solid #FDB83B;
+}
+.main_problem_list .single_item.status_green {
+    border-left:4px solid #3FD655;
+}
+.main_problem_list .single_item.status_red {
+    border-left:4px solid #DD403D;
+}
+.main_problem_list .single_item span{
+    display: block;
+}
+.main_problem_list .single_item{
+    overflow: hidden;
+    width: 94%;
+}
+.main_problem_list .item_problem_name {
+    margin-bottom: 0px;
+    font-size: 18px;
+    font-weight: normal;
+    line-height: 1.2;
+}
+
+/*
+#Sort
+```
+<div style="width:500px;" class="example-main-background steel_d1_fill">
+    <ul class="sort_select" >
+          <li class="gray_d4_text font-14px">SORT BY:</li>
+          <li class="sort_select_btn"><span>HCC</span><i class="fa fa-sort"></i></li>
+          <li class="sort_select_btn active"><span>Name</span><i class="fa fa-caret-down"></i></li>
+          <li class="sort_select_btn"><span>Date</span><i class="fa fa-sort"></i></li>
+    </ul>
+</div>
+```
+*/
+
+.sort_select{
+padding-left: 0;
+}
+.sort_select li{
+list-style: none;
+display: inline-block;
+}
+
+.sort_select_btn:hover{
+    color: #336699;
+    background: none;
+    border: 1px solid #336699;
+}
+.sort_select_btn span{
+margin-right: 4px;
+}
+
+.sort_select_btn.active{
+    color: #336699;
+    background: none;
+    border: 1px solid #336699;
+}
+
+.sort_select_btn{
+    padding: 4px;
+    margin: 0;
+    border-radius: 2px;
+    cursor: pointer;
+    min-width: 55px;
+    text-align: center;
+    padding-bottom: 1px;
+    padding-top: 1px;
+    border: 1px solid #BCBCBC;
+    color: #383737;
+}
+.sort_select_btn .fa{
+opacity: 0.3;
+}
+
+.sort_select_btn.active .fa{
+opacity: 1;
+}
+
+/*
+#Dropdown
+```
+<div style="width:500px;" class="example-main-background steel_d1_fill">
+
+    <div class="btn-group btn-input clearfix">
+         <button type="button" class="btn btn-default-dropdown dropdown-toggle form-control" data-toggle="dropdown">
+           <span data-bind="label">Select One</span>&nbsp;<i class="fa fa-caret-down"></i>
+         </button>
+         <ul class="dropdown-menu" role="menu">
+           <li><a href="#">Item</a></li>
+           <li><a href="#">Another item</a></li>
+           <li><a href="#">This is a longer item</a></li>
+         </ul>
+    </div>
+
+</div>
+```
+*/
+.btn-input {
+    display: block;
+}
+
+.btn-input .btn.form-control {
+    text-align: left;
+}
+
+.btn-input .btn.form-control span:first-child {
+    left: 10px;
+    overflow: hidden;
+    position: absolute;
+    right: 25px;
+}
+
+.btn-input .btn.form-control .fa-caret-down {
+    position: absolute;
+    right: 12px;
+    top: 8px;
+    font-size: 27px;
+}
+
+.btn-default-dropdown.dropdown-toggle{
+    color: #ffffff;
+border-color: #535353;
+color:black;
+}
+
+.btn-default-dropdown:hover, .btn-default-dropdown:focus, .btn-default-dropdown:active, .btn-default-dropdown.active, .open > .dropdown-toggle.btn-default-dropdown {
+    color: #ffffff;
+    background-color: #336699;;
+    border-color: #336699;;
+}
+
+/*
+#Side Nav Tabs
+```
+<div style="width:400px;" class="example-main-background steel_d1_fill">
+    <ul class="nav sidenav-tabs" role="tablist">
+          <li><a href="#home" role="tab" data-toggle="tab">Tab </a></li>
+          <li class="active"><a href="#profile" role="tab" data-toggle="tab">Active Tab</a></li>
+          <li><a href="#messages" role="tab" data-toggle="tab">Tab </a></li>
+    </ul>
+</div>
+```
+```
+<div style="width:400px;" class="example-main-background steel_d1_fill">
+    <ul class="nav sidenav-tabs" role="tablist">
+          <li><a href="#home" role="tab" data-toggle="tab">Tab Heading <span class="badge">1</span></a></li>
+          <li class="active"><a href="#profile" role="tab" data-toggle="tab">Tab Heading <span class="badge">2</span></a></li>
+          <li><a href="#messages" role="tab" data-toggle="tab">Tab Heading <span class="badge">11</span></a></li>
+          <li><a href="#messages" role="tab" data-toggle="tab">Tab Heading Longer Length <span class="badge">21</span></a></li>
+
+    </ul>
+</div>
+```
+*/
+.sidenav-tabs li:first-child{
+border-top: 1px solid #C0CDD1;
+border-bottom: 0;
+}
+
+.sidenav-tabs li:last-child{
+border-bottom: 1px solid #C0CDD1;
+border-top: 1px solid #C0CDD1;
+border-top: 0;
+}
+
+.sidenav-tabs li{
+border-right: 1px solid #C0CDD1;
+border-left: 0;
+border-bottom: 0;
+border-top: 0;
+}
+
+.sidenav-tabs .active{
+border-left: 1px solid #C0CDD1;
+border-right:0;
+border-bottom:1px solid #C0CDD1;
+border-top: 1px solid #C0CDD1;
+}
+
+.sidenav-tabs .active:last-child{
+border-top: 1px solid #C0CDD1;
+}
+
+.sidenav-tabs .active:first-child{
+border-bottom: 1px solid #C0CDD1;
+}
+
+.sidenav-tabs .active a{
+color: #535353;
+}
+
+.sidenav-tabs .active a:hover{
+background-color:#ecf0f1 ;
+cursor: default;
+}
+
+.sidenav-tabs .active .fa{
+opacity: 0.4;
+}
+
+.sidenav-tabs .active:first-child{
+border-top: 0;
+}
+
+.sidenav-tabs .active:last-child{
+border-bottom: 0;
+}
+
+
+/*
+#Allergies List Main
+
+```
+<div class="example-main-background steel_d1_fill">
+<div class="main_allergy_list item_list">
+    <div class="item_list_title">
+         <span>Medication</span>
+    </div>
+    <div class="single_item_group">
+        <div class="single_item single_item_hover">
+            <div class="item_info">
+               <span class="item_allergy_name font-bold font-upcase">Penicillin</span>
+               <span class="label label-danger">Allergy - SEVERE</span>
+               <span class="font-15px">Difficulty breathing, Hives, Wheezing, Dizziness, Loss of consciousness, Rapid pulse, Skin turning blue, Diarrhea, Nausea, and Vomiting.<span>
+            </div>
+            <div class="item_sub_info">
+               <span class="gray_d3_text font-12px">ONSET: CHILDHOOD</span>
+               <span class="gray_d3_text font-12px">BY DR.ROBERT SIMONS<span>
+            </div>
+        </div>
+        <div class="single_item_actions">
+               <button class="btn-link font-18px"><i class="fa fa-cog"></i> </button>
+        </div>
+    </div>
+    <div class="single_item_group">
+        <div class="single_item single_item_hover">
+            <div class="item_info">
+               <span class="item_allergy_name">Ibuprofen</span>
+               <span class="label label-default">Intolerance (NOT Checked) - MILD</span>
+               <span class="font-15px">Drowsiness</span>
+            </div>
+            <div class="item_sub_info">
+               <span class="gray_d3_text font-12px">ONSET: 08/20/2014</span>
+               <span class="gray_d3_text font-12px">BY DR.ROBERT SIMONS</span>
+            </div>
+        </div>
+        <div class="single_item_actions">
+               <button class="btn-link font-18px"><i class="fa fa-cog"></i> </button>
+        </div>
+    </div>
+</div>
+<div class="main_allergy_list item_list">
+    <div class="item_list_title">
+         <span>Environmental</span>
+    </div>
+    <div class="single_item_group">
+        <div class="single_item single_item_hover">
+            <div class="item_info">
+               <span class="item_allergy_name">Latex</span>
+               <span class="label label-warning">Allergy - MODERATE</span>
+               <span class="font-15px">Headache, Reddened eyes, Sneezing </span>
+            </div>
+            <div class="item_sub_info">
+               <span class="gray_d3_text font-12px">ONSET: UNKNOWN</span>
+               <span class="gray_d3_text font-12px">BY DR.ROBERT SIMONS</span>
+            </div>
+        </div>
+        <div class="single_item_actions">
+               <button class="btn-link font-18px"><i class="fa fa-cog"></i> </button>
+        </div>
+    </div>
+</div>
+<div class="main_allergy_list item_list">
+    <div class="item_list_title">
+         <span>Food</span>
+    </div>
+    <div class="single_item_group">
+        <div class="single_item single_item_hover">
+            <div class="item_info">
+               <span class="item_allergy_name">Mango</span>
+               <span class="label label-warning">Allergy - MODERATE</span>
+               <span class="font-15px">Itchy and flaky skin, Skin inflammation</span>
+            </div>
+            <div class="item_sub_info">
+               <span class="gray_d3_text font-12px">ONSET: UNKNOWN</span>
+               <span class="gray_d3_text font-12px">BY DR.ROBERT SIMONS</span>
+            </div>
+        </div>
+        <div class="single_item_actions">
+               <button class="btn-link font-18px"><i class="fa fa-cog"></i></button>
+        </div>
+    </div>
+</div>
+</div>
+```
+*/
+
+.single_item_group{
+    overflow: hidden;
+
+}
+.main_allergy_list > .single_item > div{
+    float:left;
+    display:block;
+}
+
+.main_allergy_list > .single_item > div:last-child{
+    float:right;
+    display:block;
+}
+.single_item_group > div{
+    float:left;
+    display:block;
+}
+
+.single_item_group > div:last-child{
+    float:right;
+    display:block;
+}
+.single_item_group .single_item > div{
+    float:left;
+    display:block;
+}
+
+.single_item_group .single_item > div:last-child{
+    float:right;
+    display:block;
+}
+
+.main_allergy_list .item_info{
+    width: 75%;
+    text-align: left;
+}
+
+.main_allergy_list .item_sub_info{
+    width: 25%;
+    text-align: right;
+}
+.main_allergy_list .single_item_actions{
+    width: 6%;
+    float:left;
+}
+
+.main_allergy_list .single_item span{
+    display: block;
+}
+.main_allergy_list .single_item .label{
+    display: inline-block;
+}
+.main_allergy_list .single_item{
+    overflow: hidden;
+    width: 94%;
+}
+.main_allergy_list .item_allergy_name {
+    margin-bottom: 0px;
+    font-size: 18px;
+    line-height: 1.2;
+}
+
+.main_allergy_list .item_list_title{
+    width: 94%;
+}
+/*
+<span class="label label-danger">Allergy - SEVERE</span><br><br>
+<span class="label label-warning">Allergy - MODERATE</span><br><br>
+<span class="label label-info">Allergy - MILD</span><br><br>
+<span class="label label-default">Intolerance (NOT Checked) - SEVERE</span><br><br>
+<span class="label label-default">Intolerance (NOT Checked) - MODERATE</span><br><br>
+<span class="label label-default">Intolerance (NOT Checked) - MILD</span>
+*/
+
+
+/*
+#Allergies List Main
+
+```
+<div style="width:400px" class="example-main-background steel_d1_fill">
+    <div class="form-group">
+        <label>Reactions</label>
+        <input type="text" class="form-control mod_input" placeholder="Type here...">
+        <span class="fa fa-asterisk"></span>
+    </div>
+    <div class="form-group sub-textarea-group">
+       <textarea class="form-control mod_input" rows="3" placeholder="Please type here..."></textarea>
+    </div>
+</div>
+
+```
+*/
+
+
+.sub-textarea-group{
+    margin-top: -15px;
+}
