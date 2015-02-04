@@ -100,65 +100,6 @@
     <script src="js/ui-bootstrap-tpls-0.11.0.min.js"></script>
     <script src="js/angular-script.js"></script>
   
-    <script>
-	//Ladda.bind('.progress-loading button', {timeout:7000});
-	Ladda.bind('input[type=submit]');
-
-
-	// Loading Timer, done when scope.loading set to false
-	function loading_timer(ladda){
-			ladda.start();
-			setTimeout(function(){
-		            var runTimes = 0;
-			    function wait(){
-				if(angular.element("#angular_treeGridController").scope().loading == true){
-					setTimeout(function(){
-						runTimes++;
-						//console.log(runTimes);
-						wait();
-					}, 300);
-				}else{
-					ladda.stop();	
-				}	
-			    }
-			    wait();
-			}, 100);
-	}
-
-	// Buttons for Searching, Next and Previous
-	$(function(){
-		$('#search_text').keypress(function(handler) {
-			//console.log(handler);
-			// User pressed the Enter Key to Search
-			if(handler.keyCode == 13){
-				$('#search_submit').trigger("click");
-			}
-		});
-		$('#search_submit').click(function() {
-			var l = Ladda.create(this);
-			var search_text = $('#search_text').val();
-			console.log(search_text.length);
-			if(search_text.length == 0){
-				alert("No search term string entered.");
-			}else{
-				console.log("start searching...");
-				angular.element("#angular_treeGridController").scope().searchTerm(search_text);
-				loading_timer(l);	
-			}
-		});
-		$('#search_next_submit').click(function(){
-			var l = Ladda.create(this);
-			console.log("calling next...");
-			loading_timer(l);
-		});
-		$('#search_prev_submit').click(function(){
-			var l = Ladda.create(this);
-			console.log("calling prev...");
-			loading_timer(l);
-		});
-	});
-    </script>
-
 
 </body>
 </html>

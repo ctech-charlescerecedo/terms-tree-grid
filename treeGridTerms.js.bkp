@@ -1,3 +1,13 @@
+/*
+ * termGridTree v1.0.0
+ * Homepage: https://github.com/ctech-charlescerecedo/terms-tree-grid
+ * Copyright 2015 Chen Tech, Inc.
+*/
+
+
+/*
+ * Controller
+*/
 (function() {
   var app, deps;
 
@@ -16,10 +26,14 @@
 	
     $scope.favorite = "fav";	
     $scope.page = 0;
-    
+    $scope.limit1 = 1;
+    $scope.limit2 = 10;
+ 
     $scope.next = function(){
 	$scope.page++;
 	//$localStorage.terms = $scope.terms;
+	$scope.limit1 = $scope.limit1 + 10;
+	$scope.limit2 = $scope.limit2 + 10;
 	$scope.searchTerm();
 	
     }
@@ -28,6 +42,8 @@
 		alert("Already at the begining!");
 	}else{
 		$scope.page--;
+		$scope.limit1 = $scope.limit1 - 10;
+		$scope.limit2 = $scope.limit2 - 10;
 		$scope.searchTerm();
 	}
     }
@@ -38,11 +54,13 @@
 	$scope.loading = true; // Let loading button know we are starting
 	if($scope.page == 0){
 		$scope.page = 1;
+		$scope.limit1 = 1;
+		$scope.limit2 = 10;
 	}
 
 	if($scope.favorite == "fav"){
 		console.log("favorite selected");
-		return $http.get("http://terms2.azurewebsites.net/api/term/" + $scope.searchValue + "/codename");
+		return $http.get("http://terms2.azurewebsites.net/api/term/" + $scope.searchValue + "/codename/" + $scope.limit1 + "/" + $scope.limit2);
 	}else{
 		console.log("imo selected");
 		return $http.get("http://terms2.azurewebsites.net/api/term/" + $scope.searchValue + "/10/" + $scope.page);
@@ -63,6 +81,7 @@
 	    $scope.fn_search().then(function(resp){
 		$scope.terms = resp.data.terms;
         	rawTreeData = $scope.terms;
+		//console.log(rawTreeData);
     		myTreeData = getTree(rawTreeData, 'Id', 'ParentTermId');
     		$scope.tree_data = myTreeData;
 		$scope.loading = false;  // Let loading button know we are done 
@@ -89,6 +108,62 @@
 	$scope.branch = branch;
     }
    
+
+function getTree(data, primaryIdName, parentIdName){
+	if(!data || data.length==0 || !primaryIdName ||!parentIdName)
+		return [];
+	var tree = [],
+		rootIds = [],
+		item = data[0],
+		primaryKey = item[primaryIdName],
+		treeObjs = {},
+		parentId,
+		parent,
+		len = data.length,
+		i = 0;
+
+
+	// Do Root Nodes first	
+	while(i<len){
+		item = data[i++];  // object
+		primaryKey = item[primaryIdName]; // Id Guid			
+		treeObjs[primaryKey] = item; // use Id key to store object
+		parentId = item[parentIdName]; // ParentTermId Guid or empty string
+		item = getCodeName(item);
+		if(!parentId){
+			rootIds.push(primaryKey);
+		}
+	}
+	i=0;
+	// Do child nodes
+	while(i<len){
+		item = data[i++];  // object
+		primaryKey = item[primaryIdName]; // Id Guid			
+		treeObjs[primaryKey] = item; // use Id key to store object
+		parentId = item[parentIdName]; // ParentTermId Guid or empty string
+		item = getCodeName(item);
+		if(parentId){
+			parent = treeObjs[parentId];  // bug parentId is "" has multiple	
+			if(parent.children){
+				parent.children.push(item);
+				//console.log(item.CodeSystemId);
+			}
+			else{
+				parent.children = [item];
+				//console.log(item.CodeSystemId);
+			}
+		}
+
+	}
+
+	for (var i = 0; i < rootIds.length; i++) {
+		tree.push(treeObjs[rootIds[i]]);
+	};
+
+	return tree;
+}
+
+ 
 
 function getCodeName(item){
 
@@ -136,53 +211,74 @@ function getCodeName(item){
 	return item;
 }
 
- 
-function getTree(data, primaryIdName, parentIdName){
-	if(!data || data.length==0 || !primaryIdName ||!parentIdName)
-		return [];
-	var tree = [],
-		rootIds = [],
-		item = data[0],
-		primaryKey = item[primaryIdName],
-		treeObjs = {},
-		parentId,
-		parent,
-		len = data.length,
-		i = 0;
-	
-	while(i<len){
-		item = data[i++];
-		primaryKey = item[primaryIdName];			
-		treeObjs[primaryKey] = item;
-		parentId = item[parentIdName];
 
-		item = getCodeName(item);
 
-		if(parentId){
-			parent = treeObjs[parentId];	
 
-			if(parent.children){
-				parent.children.push(item);
-				//console.log(item.CodeSystemId);
-			}
-			else{
-				parent.children = [item];
-				//console.log(item.CodeSystemId);
-				
-			}
-		}
-		else{
-			rootIds.push(primaryKey);
-		}
-	}
-
-	for (var i = 0; i < rootIds.length; i++) {
-		tree.push(treeObjs[rootIds[i]]);
-	};
-
-	return tree;
-}
 
   });
 
 }).call(this);
+
+
+
+/*
+ *
+ * jQuery Ladda Button Loader
+ *
+*/
+
+//Ladda.bind('.progress-loading button', {timeout:7000});
+Ladda.bind('input[type=submit]');
+
+// Loading Timer, done when scope.loading set to false
+function loading_timer(ladda){
+		ladda.start();
+		setTimeout(function(){
+	            var runTimes = 0;
+		    function wait(){
+			if(angular.element("#angular_treeGridController").scope().loading == true){
+				setTimeout(function(){
+					runTimes++;
+					//console.log(runTimes);
+					wait();
+				}, 300);
+			}else{
+				ladda.stop();	
+			}	
+		    }
+		    wait();
+		}, 100);
+}
+
+// Buttons for Searching, Next and Previous
+$(function(){
+	$('#search_text').keypress(function(handler) {
+		//console.log(handler);
+		// User pressed the Enter Key to Search
+		if(handler.keyCode == 13){
+			$('#search_submit').trigger("click");
+		}
+	});
+	$('#search_submit').click(function() {
+		var l = Ladda.create(this);
+		var search_text = $('#search_text').val();
+		console.log(search_text.length);
+		if(search_text.length == 0){
+			alert("No search term string entered.");
+		}else{
+			console.log("start searching...");
+			angular.element("#angular_treeGridController").scope().searchTerm(search_text);
+			loading_timer(l);	
+		}
+	});
+	$('#search_next_submit').click(function(){
+		var l = Ladda.create(this);
+		//console.log("calling next...");
+		loading_timer(l);
+	});
+	$('#search_prev_submit').click(function(){
+		var l = Ladda.create(this);
+		//console.log("calling prev...");
+		loading_timer(l);
+	});
+});

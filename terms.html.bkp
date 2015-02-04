@@ -45,6 +45,10 @@
 	    	<div class="main_nav_search">
 	    		<input id="search_text" class="blue_fill" placeholder="Search Term" ng-model="actionText" /><i class="fa fa-search"></i>
 	    	</div>
+		<br />
+			<input type="radio" ng-model="favorite" value="fav"> Favorites</input>
+			<input type="radio" ng-model="favorite" value="imo"> Search IMO</input>
+		<br />
 	    <br />
 	    <span class="input-group-btn">
 		<div class="progress-loading">
@@ -57,7 +61,7 @@
 		<a ng-click="my_tree.expand_all()" class="ico-system icon-chevron-down" ng-show="page > 0"></a>
 		<a ng-click="my_tree.collapse_all()" class="ico-system icon-chevron-up" ng-show="page > 0"></a>
  
-            <tree-grid tree-data="tree_data" tree-control="my_tree" col-defs="col_defs" expand-on="expanding_property" on-select="my_tree_handler(branch)" expand-level="2" icon-leaf= "glyphicon glyphicon-asterisk" ng-show="page > 0"></tree-grid>
+            <tree-grid class="table table-hover" tree-data="tree_data" tree-control="my_tree" col-defs="col_defs" expand-on="expanding_property" on-select="my_tree_handler(branch)" expand-level="2" icon-leaf= "glyphicon glyphicon-asterisk" ng-show="page > 0"></tree-grid>
 
 	
 	    <div class="progress-loading">
@@ -144,12 +148,12 @@
 		});
 		$('#search_next_submit').click(function(){
 			var l = Ladda.create(this);
-			console.log("calling next...");
+			//console.log("calling next...");
 			loading_timer(l);
 		});
 		$('#search_prev_submit').click(function(){
 			var l = Ladda.create(this);
-			console.log("calling prev...");
+			//console.log("calling prev...");
 			loading_timer(l);
 		});
 	});

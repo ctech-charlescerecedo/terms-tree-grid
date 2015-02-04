@@ -1,4 +1,7 @@
-tree-grid-directive
+ terms-tree-grid 
+===========================
+
+ taken from tree-grid-directive 
 ===========================
 
 A grid to display data in tree structure by using angular, bootstrap.
