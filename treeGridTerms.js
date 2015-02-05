@@ -59,11 +59,36 @@
 	}
 
 	if($scope.favorite == "fav"){
-		console.log("favorite selected");
-		return $http.get("http://terms2.azurewebsites.net/api/term/" + $scope.searchValue + "/codename/" + $scope.limit1 + "/" + $scope.limit2);
+		//console.log("favorite selected");
+		var reg = /^\d+$/;
+		if(reg.test($scope.searchValue)){
+			alert("no code searches yet");
+		}else{
+			return $http.get("http://terms2.azurewebsites.net/api/term/" + $scope.searchValue + "/codename/" + $scope.limit1 + "/" + $scope.limit2).
+                                success(function(data){
+                                        return data;
+                                }).
+                                error(function(data, status, headers, config){
+                                        console.log(status);
+                                        console.log(data);
+                                        console.log(headers);
+                                        console.log(config);
+                                        $scope.loading = false;  // Let loading button know we are done 
+                                });
+		}
 	}else{
-		console.log("imo selected");
-		return $http.get("http://terms2.azurewebsites.net/api/term/" + $scope.searchValue + "/10/" + $scope.page);
+		//console.log("imo selected");
+		return $http.get("http://terms2.azurewebsites.net/api/term/" + $scope.searchValue + "/10/" + $scope.page).
+			success(function(data){
+				return data;
+			}).
+                         error(function(data, status, headers, config){
+                                console.log(status);
+                                console.log(data);
+                                console.log(headers);
+                                console.log(config);
+                         	$scope.loading = false;  // Let loading button know we are done 
+                         });
 	}
     }
 

@@ -59,10 +59,15 @@
 	}
 
 	if($scope.favorite == "fav"){
-		console.log("favorite selected");
-		return $http.get("http://terms2.azurewebsites.net/api/term/" + $scope.searchValue + "/codename/" + $scope.limit1 + "/" + $scope.limit2);
+		//console.log("favorite selected");
+		var reg = /^\d+$/;
+		if(reg.test($scope.searchValue)){
+			alert("no code searches yet");
+		}else{
+			return $http.get("http://terms2.azurewebsites.net/api/term/" + $scope.searchValue + "/codename/" + $scope.limit1 + "/" + $scope.limit2);
+		}
 	}else{
-		console.log("imo selected");
+		//console.log("imo selected");
 		return $http.get("http://terms2.azurewebsites.net/api/term/" + $scope.searchValue + "/10/" + $scope.page);
 	}
     }
