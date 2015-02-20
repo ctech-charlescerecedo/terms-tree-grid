@@ -20,7 +20,7 @@
                   </tr>\
                   </thead>\
                   <tbody>\
-                  <tr ng-repeat=\"row in tree_rows | filter:{visible:true} track by row.branch.uid\"\
+                  <tr ng-repeat=\"row in tree_rows | filter:{visible:true} track by $index\"\
                       ng-class=\"'level-' + {{ row.level }} + (row.branch.selected ? ' active':'')\" class=\"tree-grid-row\">\
                       <td class=\"text-primary\"><a ng-click=\"user_clicks_branch(row.branch)\"><i ng-class=\"row.tree_icon\"\
                                  ng-click=\"row.branch.expanded = !row.branch.expanded\"\

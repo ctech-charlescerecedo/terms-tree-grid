@@ -60,11 +60,21 @@
 
 	if($scope.favorite == "fav"){
 		//console.log("favorite selected");
-		var reg = /^\d+$/;
+		var reg = /^\d+[.]+\d+$/;
 		if(reg.test($scope.searchValue)){
-			alert("no code searches yet");
+			return $http.get("http://terms.azurewebsites.net/api/term/" + $scope.searchValue + "/codenumber/" + $scope.limit1 + "/" + $scope.limit2).
+                                success(function(data){
+                                        return data;
+                                }).
+                                error(function(data, status, headers, config){
+                                        console.log(status);
+                                        console.log(data);
+                                        console.log(headers);
+                                        console.log(config);
+                                        $scope.loading = false;  // Let loading button know we are done 
+                                });
 		}else{
-			return $http.get("http://terms2.azurewebsites.net/api/term/" + $scope.searchValue + "/codename/" + $scope.limit1 + "/" + $scope.limit2).
+			return $http.get("http://terms.azurewebsites.net/api/term/" + $scope.searchValue + "/codename/" + $scope.limit1 + "/" + $scope.limit2).
                                 success(function(data){
                                         return data;
                                 }).
@@ -78,7 +88,7 @@
 		}
 	}else{
 		//console.log("imo selected");
-		return $http.get("http://terms2.azurewebsites.net/api/term/" + $scope.searchValue + "/10/" + $scope.page).
+		return $http.get("http://terms.azurewebsites.net/api/term/" + $scope.searchValue + "/10/" + $scope.page).
 			success(function(data){
 				return data;
 			}).
@@ -94,10 +104,13 @@
 
     // Search Function
     $scope.searchTerm = function(actionText){
-	console.log(actionText);
-
+	
+	
 	// Reset the search string and page number
 	if(typeof actionText !== 'undefined'){
+		actionText = actionText.replace(/[:<>;\^+-_!&*='`~@#\$)(,%\/\\]/g,'');
+		actionText = actionText.trim();
+		console.log(actionText);
 		$scope.searchValue = actionText;
 		$scope.page = 0;
 	}
